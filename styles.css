@@ -10,6 +10,7 @@
     --primary-color: #8C2433;
     --secondary-color: #DFE5EB;
     --tertiary-color: #161616;
+    --surface-color: #FFFCFA;
 
     /* Typography tokens */
     --base-font-size: 16px;
@@ -19,10 +20,11 @@
 
     /* Responsive desktop layout tokens (1024–1920px) */
     --page-gutter: clamp(32px, 5vw, 64px);
+    --canvas-width: min(100vw, 1280px);
     --content-max-width: 1440px;
     --content-inline: max(var(--page-gutter), calc((100vw - var(--content-max-width)) / 2));
     --grid-gap: clamp(24px, 3.75vw, 48px);
-    --half-column: calc((100vw - 2 * var(--content-inline) - var(--grid-gap)) / 2);
+    --half-column: calc((var(--canvas-width) - 2 * var(--page-gutter) - var(--grid-gap)) / 2);
     --hero-goal-width: min(753px, 58.83vw);
 
     /* Figma uses a 1152px content grid inside the 1280px desktop canvas. */
@@ -63,6 +65,13 @@ body {
     font-family: var(--main-font);
     font-size: var(--base-font-size);
     color: var(--tertiary-color);
+    background-color: #fff;
+}
+
+header,
+main {
+    width: min(100%, 1280px);
+    margin-inline: auto;
 }
 
 /* Russian body copy may hyphenate, while headings keep whole words. */
@@ -272,6 +281,8 @@ nav ul {
 
 .section-name h2 {
     margin: 0;
+    width: 557px;
+    text-align: right;
 }
 
 .section-name.start {
@@ -349,9 +360,22 @@ nav ul {
 }
 
 .describe-text-section {
+    position: relative;
+    z-index: 0;
     display: flex;
     align-items: flex-start;
     align-self: stretch;
+}
+
+.describe-text-section::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -8px;
+    left: 1px;
+    width: 752px;
+    height: 135px;
+    background: url("./images/hero-grid.svg") center / 100% 100% no-repeat;
 }
 
 .describe-text {
@@ -857,4 +881,260 @@ nav ul {
     text-transform: uppercase;
     text-box-trim: trim-both;
     text-box-edge: cap alphabetic;
+}
+
+/*
+ * Desktop master layout
+ * The Figma source is a 1280 × 832 canvas. At wider viewport sizes the
+ * composition stays at 1280px and the browser shows empty side margins.
+ */
+@media (min-width: 1280px) {
+    :root {
+        --page-gutter: 64px;
+        --content-inline: 64px;
+        --fixed-layout-inline: 64px;
+        --grid-gap: 48px;
+        --half-column: 552px;
+        --hero-goal-width: 753px;
+        --hero-media-width: 552px;
+        --header-height: 112px;
+    }
+
+    header {
+        height: 112px;
+        padding-inline: 64px;
+    }
+
+    header h1 {
+        width: 552px;
+        font-size: 2.5rem;
+    }
+
+    nav ul {
+        width: 552px;
+        gap: 0;
+    }
+
+    .nav-link {
+        padding: 16px;
+        font-size: 1rem;
+    }
+
+    .content-section,
+    .content-section:first-of-type,
+    .projects-section,
+    .background-section {
+        height: 720px;
+    }
+
+    /* Hero: 64 / 552 / 48 / 552 / 64 */
+    .hero-section {
+        padding: 32px 64px 48px;
+    }
+
+    .hero-poster {
+        width: 552px;
+        height: 640px;
+        max-height: none;
+    }
+
+    .hero-poster-text {
+        top: 96px;
+        left: 200px;
+        gap: 24px;
+        font-size: 1rem;
+        line-height: 24px;
+    }
+
+    .hero-photo {
+        width: 552px;
+        height: 352px;
+    }
+
+    .describe-section {
+        top: auto;
+        right: 63px;
+        bottom: 48px;
+        width: 753px;
+        height: 256px;
+    }
+
+    .describe-text {
+        font-size: 2.5rem;
+        line-height: 44px;
+    }
+
+    /* Projects: 48px heading + 624px project grid + 48px footer space. */
+    .projects-section {
+        padding: 0 64px 48px;
+    }
+
+    .projects-section .section-name {
+        width: 1152px;
+        height: 48px;
+        justify-content: flex-start;
+        padding: 0;
+    }
+
+    .projects-section .section-name h2 {
+        text-align: left;
+    }
+
+    .projects-grid {
+        flex: 0 0 624px;
+        width: 1152px;
+        height: 624px;
+        grid-template-columns: 552px 552px;
+        grid-template-rows: 320px 272px;
+        gap: 32px 48px;
+    }
+
+    /* Background screens use the same exact 1152px table grid. */
+    #background {
+        padding: 0;
+        background-color: var(--surface-color);
+    }
+
+    #background .section-name {
+        height: 64px;
+        padding-inline: 64px;
+    }
+
+    #background .expirience {
+        height: 470px;
+        margin-top: auto;
+        padding: 32px 64px 48px;
+        background-color: var(--secondary-color);
+    }
+
+    #education {
+        padding: 32px 64px 48px;
+        background-color: var(--secondary-color);
+    }
+
+    #education .section-name {
+        width: 1152px;
+        height: 64px;
+    }
+
+    #education .expirience {
+        height: 385px;
+        margin-top: auto;
+        padding: 0;
+    }
+
+    .expirience-table {
+        width: 1152px;
+        padding-top: 64px;
+        gap: 32px;
+    }
+
+    .expirience-table .expirience-row {
+        width: 1152px;
+        gap: 48px;
+    }
+
+    .expirience-table .expirience-row .column-date-university,
+    .expirience-table .expirience-row .column-description {
+        flex: 0 0 552px;
+    }
+
+    /* About: two Figma frames, 720px then 832px. */
+    .about-first {
+        height: 720px;
+        min-height: 720px;
+        padding: 32px 64px 0;
+    }
+
+    .about-intro {
+        width: 1152px;
+        height: 246px;
+        grid-template-columns: 752px 352px;
+        gap: 48px;
+        padding: 32px 0;
+    }
+
+    .about-collage {
+        width: 1152px;
+        height: 346px;
+        flex-basis: 346px;
+        grid-template-columns: 552px 552px;
+        gap: 48px;
+    }
+
+    .about-mountain-top {
+        background-position: center -43px;
+    }
+
+    .facts-top {
+        grid-template-columns: 152px 400px;
+    }
+
+    .facts-count {
+        font-size: 2.5rem;
+        line-height: 44px;
+    }
+
+    .facts-count strong {
+        height: 128px;
+        font-size: 8.36rem;
+    }
+
+    .fact {
+        gap: 16px;
+    }
+
+    .about-second {
+        height: 832px;
+        min-height: 832px;
+        padding: 0 64px 48px;
+    }
+
+    .about-mountain-bottom {
+        width: 552px;
+        height: 304px;
+        background-position: center -389px;
+    }
+
+    .dive-plaque {
+        top: 48px;
+        right: 64px;
+        width: 752px;
+        height: 160px;
+        padding: 16px 0 16px 152px;
+        font-size: 2.5rem;
+        line-height: 44px;
+    }
+
+    .newton-story {
+        width: 1152px;
+        height: 480px;
+        flex-basis: 480px;
+        grid-template-columns: 352px 352px 352px;
+        gap: 48px;
+        padding-top: 32px;
+    }
+
+    .newton-copy {
+        padding-top: 44px;
+        gap: 32px;
+    }
+
+    .newton-title {
+        font-size: 2.5rem;
+        line-height: 44px;
+    }
+
+    .newton-copy .body-regular {
+        font-size: 1rem;
+        line-height: 24px;
+    }
+
+    /* Contacts are the 608px Figma panel under the sticky navigation. */
+    .contacts-section,
+    .contacts-panel {
+        width: 1280px;
+        height: 608px;
+        min-height: 608px;
+    }
 }
