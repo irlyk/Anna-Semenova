@@ -191,13 +191,14 @@ nav ul {
     margin: 0;
 }
 
-.section-name .start {
+.section-name.start {
     justify-content: start;
 }
 
 /*---- первый section ----*/
 
 .hero-section {
+    position: relative;
     display: flex;
     padding: 32px 64px 48px 64px;
     justify-content: space-between;
