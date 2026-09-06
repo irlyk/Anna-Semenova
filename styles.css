@@ -388,6 +388,11 @@ nav ul {
     letter-spacing: -1.2px;
 }
 
+.describe-text-mobile,
+.contacts-goal-mobile {
+    display: none;
+}
+
 .links {
     width: 100%;
     height: 44px;
@@ -632,6 +637,10 @@ nav ul {
 
 .about-mountain-top {
     background-position: center calc(-1 * clamp(34px, 3.36vw, 43px));
+}
+
+.dive-plaque-mobile {
+    display: none;
 }
 
 .about-facts {
@@ -1136,5 +1145,583 @@ nav ul {
         width: 1280px;
         height: 608px;
         min-height: 608px;
+    }
+}
+
+/*
+ * Mobile layout
+ * Figma source: 390px canvas, 24px gutters, 342px content column.
+ */
+@media (max-width: 767px) {
+    :root {
+        --mobile-gutter: 24px;
+        --mobile-content: calc(100vw - 2 * var(--mobile-gutter));
+        --header-height: 90px;
+    }
+
+    body,
+    header,
+    main {
+        width: 100%;
+        max-width: none;
+    }
+
+    h1,
+    .h1,
+    h2,
+    .h2 {
+        letter-spacing: -0.14px;
+    }
+
+    header {
+        height: 90px;
+        padding: 24px 24px 16px;
+        align-items: flex-start;
+        background-color: rgba(255, 252, 250, 0.88);
+        backdrop-filter: blur(8px);
+    }
+
+    header h1 {
+        width: min(260px, calc(100vw - 90px));
+        margin: 0;
+        font-size: 1.75rem;
+        line-height: 30px;
+        letter-spacing: 0;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav::after {
+        content: "МЕНЮ";
+        display: block;
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 20px;
+        white-space: nowrap;
+    }
+
+    .content-section,
+    .content-section:first-of-type,
+    .background-section,
+    .about-section {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        scroll-margin-top: 90px;
+    }
+
+    /* Hero */
+    .hero-section {
+        display: flex;
+        height: auto;
+        padding: 24px 24px 32px;
+        flex-direction: column;
+        gap: 24px;
+        overflow: hidden;
+    }
+
+    .hero-poster {
+        display: flex;
+        width: var(--mobile-content);
+        height: auto;
+        max-height: none;
+        min-height: 556px;
+        padding-top: 444px;
+        aspect-ratio: auto;
+        flex-direction: column;
+        background: url("./images/mobile-hero-primary.png") top center / 100% 420px no-repeat;
+    }
+
+    .hero-poster-text {
+        position: static;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        gap: 16px;
+        font-size: 1rem;
+        line-height: 24px;
+    }
+
+    .hero-poster-text br {
+        display: none;
+    }
+
+    .hero-photo {
+        width: var(--mobile-content);
+        height: 218px;
+        aspect-ratio: auto;
+        background: url("./images/mobile-hero-secondary.png") center / 100% 100% no-repeat;
+    }
+
+    .describe-section {
+        position: static;
+        display: flex;
+        width: var(--mobile-content);
+        height: auto;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .describe-text-section::before {
+        display: none;
+    }
+
+    .describe-text {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 38px;
+        letter-spacing: -0.96px;
+    }
+
+    .describe-text br {
+        display: none;
+    }
+
+    .describe-text-desktop,
+    .contacts-goal-desktop {
+        display: none;
+    }
+
+    .describe-text-mobile,
+    .contacts-goal-mobile {
+        display: block;
+    }
+
+    .describe-text-mobile span,
+    .contacts-goal-mobile span {
+        display: block;
+    }
+
+    .links {
+        display: flex;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .link-cv,
+    .link-telegram {
+        position: static;
+        display: flex;
+        width: 100%;
+        height: 48px;
+        min-height: 48px;
+        align-items: center;
+        font-size: 1rem;
+    }
+
+    /* Projects are intentionally absent from the mobile Figma flow. */
+    .projects-section {
+        display: none;
+    }
+
+    /* Background: experience and education become one vertical list. */
+    #background,
+    #education {
+        display: flex;
+        padding: 0 24px;
+        background-color: var(--surface-color);
+    }
+
+    #background {
+        padding-top: 40px;
+    }
+
+    #background .section-name {
+        display: flex;
+        width: 100%;
+        height: auto;
+        justify-content: flex-start;
+    }
+
+    #background .section-name h2 {
+        width: 100%;
+        font-size: 1.75rem;
+        font-weight: 700;
+        line-height: 28px;
+        text-align: left;
+    }
+
+    #education .section-name {
+        display: none;
+    }
+
+    #background .expirience,
+    #education .expirience {
+        display: flex;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 72px 0 0;
+        background: transparent;
+    }
+
+    #education {
+        padding-bottom: 56px;
+    }
+
+    .expirience h3 {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 36.8px;
+        letter-spacing: -0.16px;
+    }
+
+    .expirience-table {
+        width: 100%;
+        padding-top: 40px;
+        gap: 32px;
+    }
+
+    .expirience-table .expirience-row {
+        display: flex;
+        width: 100%;
+        padding-bottom: 12px;
+        flex-direction: column;
+        gap: 12px;
+        border-bottom: 1px solid rgba(22, 22, 22, 0.14);
+    }
+
+    .expirience-table .expirience-row .column-date-university {
+        display: contents;
+    }
+
+    .expirience-table .expirience-row .column-date-university .column-date,
+    .expirience-table .expirience-row .column-date-university .column-university,
+    .expirience-table .expirience-row .column-description {
+        display: block;
+        width: 100%;
+        flex: none;
+    }
+
+    .column-date .body-regular {
+        font-size: 0.875rem;
+        line-height: 19.6px;
+    }
+
+    .column-university .body-medium {
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 22.4px;
+        text-transform: none;
+    }
+
+    .column-description .body-regular,
+    .column-description .body-regular p {
+        font-size: 0.9375rem;
+        line-height: 23.25px;
+    }
+
+    /* Why design */
+    .about-first {
+        display: flex;
+        padding: 40px 24px 0;
+        flex-direction: column;
+    }
+
+    .about-heading {
+        display: flex;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .about-heading h2 {
+        margin: 0;
+        font-size: 1.75rem;
+        font-weight: 700;
+        line-height: 28px;
+    }
+
+    .about-subheading {
+        padding: 0;
+        font-size: 1.75rem;
+        line-height: 32.2px;
+        letter-spacing: -0.84px;
+        text-align: right;
+    }
+
+    .about-intro {
+        display: flex;
+        width: 100%;
+        height: auto;
+        padding: 64px 0 0;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-question {
+        order: -1;
+        font-size: 2rem;
+        line-height: 35.2px;
+        letter-spacing: -0.96px;
+        text-align: left;
+    }
+
+    .about-question span {
+        display: inline;
+    }
+
+    .about-question span:first-child {
+        display: block;
+    }
+
+    .about-intro-copy {
+        display: contents;
+    }
+
+    .about-intro-copy > p {
+        font-size: 0.9375rem;
+        line-height: 22.5px;
+    }
+
+    .about-collage {
+        display: flex;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding-top: 48px;
+        flex: none;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .about-mountain-top {
+        width: 100%;
+        height: 420px;
+        background: url("./images/mobile-mountain.png") center / 100% 100% no-repeat;
+        filter: none;
+    }
+
+    .dive-plaque-mobile {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        width: min(294px, calc(100% - 48px));
+        height: 128px;
+        margin: -32px 0 0 48px;
+        padding: 16px 16px 16px 20px;
+        flex-direction: column;
+        gap: 6px;
+        overflow: hidden;
+        background-color: var(--secondary-color);
+        font-size: 1.4375rem;
+        font-weight: 700;
+        line-height: 23px;
+        letter-spacing: 0.23px;
+    }
+
+    .dive-plaque-mobile em {
+        font-size: 1.625rem;
+        font-weight: 500;
+        line-height: 28.6px;
+        letter-spacing: -0.78px;
+    }
+
+    .about-facts {
+        display: flex;
+        width: 100%;
+        padding-top: 64px;
+        flex-direction: column;
+        gap: 36px;
+    }
+
+    .facts-top {
+        display: contents;
+    }
+
+    .facts-count {
+        display: block;
+        font-size: 1.75rem;
+        line-height: 33.6px;
+        letter-spacing: -0.56px;
+    }
+
+    .facts-count strong {
+        display: inline;
+        height: auto;
+        margin-right: 6px;
+        font-size: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+    }
+
+    .fact {
+        gap: 12px;
+    }
+
+    .fact-title {
+        font-size: 1.125rem;
+        line-height: 24.3px;
+    }
+
+    .fact .body-regular,
+    .fact > p:last-child {
+        font-size: 0.9375rem;
+        line-height: 23.25px;
+    }
+
+    .desktop-prefix {
+        display: none;
+    }
+
+    .about-second {
+        display: block;
+        height: auto;
+        min-height: 0;
+        padding: 72px 24px 56px;
+    }
+
+    .about-mountain-bottom,
+    .about-second > .dive-plaque {
+        display: none;
+    }
+
+    .newton-story {
+        display: grid;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto 224px;
+        gap: 24px 16px;
+    }
+
+    .newton-copy {
+        display: flex;
+        height: auto;
+        padding: 0;
+        grid-column: 1 / -1;
+        grid-row: 1;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .newton-title {
+        font-size: 2rem;
+        line-height: 35.2px;
+        letter-spacing: -0.96px;
+    }
+
+    .newton-copy .body-regular,
+    .newton-copy .body-regular p {
+        font-size: 0.9375rem;
+        line-height: 22.5px;
+    }
+
+    .newton-copy .body-regular p + p {
+        margin-top: 22.5px;
+    }
+
+    .newton-photo {
+        width: 100%;
+        height: 224px;
+        object-fit: cover;
+        object-position: bottom;
+        aspect-ratio: auto;
+    }
+
+    .newton-overhead {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .newton-portrait {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    /* Contacts */
+    .contacts-section,
+    .contacts-panel {
+        width: 100%;
+        height: 844px;
+        min-height: 844px;
+    }
+
+    .contacts-panel {
+        padding: 32px 24px 24px;
+    }
+
+    .contacts-heading {
+        width: 100%;
+        height: 60px;
+        font-size: 1.75rem;
+        line-height: 30px;
+        letter-spacing: -0.28px;
+        text-transform: lowercase;
+    }
+
+    .contacts-goal {
+        width: 100%;
+        height: 376px;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .contacts-goal::before {
+        display: none;
+    }
+
+    .contacts-goal-text {
+        display: flex;
+        width: 100%;
+        height: 256px;
+        padding: 28px 24px;
+        align-items: center;
+        font-size: 1.875rem;
+        line-height: 32px;
+        letter-spacing: -0.3px;
+        background: url("./images/mobile-contacts-grid.svg") center / 100% 100% no-repeat;
+    }
+
+    .contacts-goal-text br {
+        display: none;
+    }
+
+    .contacts-actions {
+        display: flex;
+        width: 100%;
+        height: 96px;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .contacts-actions a {
+        width: 100%;
+        height: 44px;
+        min-height: 44px;
+        padding: 10px 0;
+        border-top: 1px solid rgba(22, 22, 22, 0.18);
+        font-size: 0.875rem;
+        line-height: 20px;
+    }
+
+    .contacts-footer {
+        width: 100%;
+        height: 88px;
+        align-items: center;
+    }
+
+    .contacts-list {
+        width: 226px;
+        grid-template-columns: 40px 1fr;
+        column-gap: 8px;
+        row-gap: 2px;
+        font-size: 0.75rem;
+        line-height: 20px;
+        text-transform: lowercase;
+    }
+
+    .contacts-year {
+        width: 110px;
+        font-size: 2rem;
+        line-height: 32px;
+        letter-spacing: -0.32px;
+        text-align: right;
     }
 }
