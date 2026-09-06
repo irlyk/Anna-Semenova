@@ -19,7 +19,8 @@
                     class="text-accent">АНЯ</span></a></h1>
 
         <nav>
-            <ul>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">МЕНЮ</button>
+            <ul id="primary-navigation">
                 <li><a href="#projects" class="nav-link">Проекты</a></li>
                 <li><a href="#background" class="nav-link">Бэкграунд</a></li>
                 <li><a href="#reasons" class="nav-link">Почему дизайн</a></li>
@@ -67,13 +68,29 @@
                 <h2><span class="text-accent">01</span> / ПРОЕКТЫ</h2>
             </div>
             <div class="projects-grid">
-                <div class="wide project project-first"></div>
-                <div class="project project-second"><iframe src="https://www.behance.net/embed/project/210978545?ilo0=1"
+                <article class="wide project project-first">
+                    <div class="project-copy">
+                        <p class="project-eyebrow">01 / ДИПЛОМНЫЙ ПРОЕКТ</p>
+                        <h3>ПОГНАЛИ!</h3>
+                        <p class="project-subtitle">Агрегатор активных туров по России</p>
+                        <div class="project-meta"><span>UX RESEARCH · PRODUCT DESIGN · MOBILE</span><span>Соло · 2025 ↗</span></div>
+                    </div>
+                    <div class="project-preview project-preview-pognali" aria-hidden="true"></div>
+                </article>
+                <article class="project project-second"><div class="project-copy">
+                    <p class="project-eyebrow">02 / КОМАНДНЫЙ ПРОЕКТ</p><h3>МТС ЛИНК</h3>
+                    <p class="project-subtitle">Исследование и концепция сервиса «Встречи»</p>
+                    <div class="project-meta"><span>WEB · TEAMWORK · B2B</span><span>3 дизайнера · 2024 ↗</span></div>
+                </div><iframe src="https://www.behance.net/embed/project/210978545?ilo0=1"
                         height="316" width="404" allowfullscreen lazyload frameborder="0" allow="clipboard-write"
-                        refererPolicy="strict-origin-when-cross-origin"></iframe></div>
-                <div class="project project-third"><iframe src="https://www.behance.net/embed/project/210963153?ilo0=1"
+                        refererPolicy="strict-origin-when-cross-origin"></iframe></article>
+                <article class="project project-third"><div class="project-copy">
+                    <p class="project-eyebrow">03 / СОЛО-ПРОЕКТ</p><h3>ФОЛИАНТ</h3>
+                    <p class="project-subtitle">Тёплое приложение для чтения книг</p>
+                    <div class="project-meta"><span>UI DESIGN · HIG · VISUAL CONCEPT</span><span>Соло · 2024 ↗</span></div>
+                </div><iframe src="https://www.behance.net/embed/project/210963153?ilo0=1"
                         height="316" width="404" allowfullscreen lazyload frameborder="0" allow="clipboard-write"
-                        refererPolicy="strict-origin-when-cross-origin"></iframe></div>
+                        refererPolicy="strict-origin-when-cross-origin"></iframe></article>
             </div>
         </section>
 
@@ -272,6 +289,22 @@
             </div>
         </section>
     </main>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navigation = document.querySelector('nav');
+
+        menuToggle?.addEventListener('click', () => {
+            const isOpen = navigation.classList.toggle('is-open');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+            menuToggle.textContent = isOpen ? 'ЗАКРЫТЬ' : 'МЕНЮ';
+        });
+
+        navigation?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+            navigation.classList.remove('is-open');
+            menuToggle?.setAttribute('aria-expanded', 'false');
+            if (menuToggle) menuToggle.textContent = 'МЕНЮ';
+        }));
+    </script>
 </body>
 
 </html>
