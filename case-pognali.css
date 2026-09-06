@@ -83,10 +83,28 @@ body {
     background: var(--surface);
 }
 
-.case-page > img {
+.case-page > img,
+.case-section > img {
     display: block;
     width: 100%;
     height: auto;
+}
+
+.case-section {
+    position: relative;
+}
+
+.case-next-link {
+    position: absolute;
+    top: 96px;
+    left: 64px;
+    width: 552px;
+    height: 180px;
+}
+
+.case-next-link:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
 }
 
 @media (prefers-reduced-motion: reduce) {
