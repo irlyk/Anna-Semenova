@@ -65,25 +65,29 @@ h1 {
 h2 {
     /* Headline/H2 */
     font-family: var(--main-font);
-    font-size: 2rem;
+    font-size: 2.25rem;
     font-style: normal;
     font-weight: 500;
     line-height: 95%;
     /* 34.2px */
     letter-spacing: 0.36px;
     text-transform: uppercase;
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
 }
 
 .h2 {
     /* Headline/H2 */
     font-family: var(--main-font);
-    font-size: 2rem;
+    font-size: 2.25rem;
     font-style: normal;
     font-weight: 500;
     line-height: 95%;
     /* 34.2px */
     letter-spacing: 0.36px;
     text-transform: uppercase;
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
 }
 
 p {
@@ -425,4 +429,207 @@ nav ul {
     align-items: center;
     gap: 10px;
     flex: 1 0 0;
+}
+
+/*---- почему дизайн ----*/
+
+.about-section {
+    height: auto;
+    background-color: #fffcfa;
+}
+
+.about-first {
+    display: flex;
+    flex-direction: column;
+    min-height: 720px;
+    padding-bottom: 0;
+}
+
+.about-heading {
+    height: 96px;
+    flex-shrink: 0;
+}
+
+.about-heading h2 {
+    margin: 0 0 16px;
+}
+
+.about-subheading {
+    padding-left: 200px;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: -1.2px;
+}
+
+.about-subheading em,
+.dive-plaque em,
+.newton-title em {
+    font-weight: inherit;
+}
+
+.about-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 752px) minmax(0, 352px);
+    justify-content: end;
+    gap: 48px;
+    padding: 32px 0;
+}
+
+.about-intro-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.about-intro-copy > p,
+.fact > p,
+.newton-title,
+.newton-copy .body-regular {
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
+}
+
+.about-question {
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: -1.2px;
+    text-align: right;
+}
+
+.about-question span {
+    display: block;
+}
+
+.about-collage {
+    display: grid;
+    grid-template-columns: minmax(0, 552px) minmax(0, 552px);
+    gap: 48px;
+    height: 346px;
+    flex: 0 0 346px;
+}
+
+.about-mountain {
+    background-image: url("./images/about-mountain.png");
+    background-repeat: no-repeat;
+    background-size: 552px auto;
+    filter: grayscale(1);
+}
+
+.about-mountain-top {
+    background-position: center -43px;
+}
+
+.about-facts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0;
+}
+
+.facts-top {
+    display: grid;
+    grid-template-columns: 152px minmax(0, 1fr);
+}
+
+.facts-count {
+    display: flex;
+    flex-direction: column;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: -1.2px;
+}
+
+.facts-count strong {
+    height: 128px;
+    font-size: 8.36rem;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -4px;
+}
+
+.fact {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.fact-title {
+    font-weight: 700;
+}
+
+.about-second {
+    position: relative;
+    height: 832px;
+    min-height: 832px;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-mountain-bottom {
+    width: 552px;
+    height: 304px;
+    flex-shrink: 0;
+    background-position: center -389px;
+}
+
+.dive-plaque {
+    position: absolute;
+    top: 48px;
+    right: 64px;
+    z-index: 1;
+    width: 752px;
+    height: 160px;
+    padding: 16px 0 16px 152px;
+    overflow: hidden;
+    background-color: var(--secondary-color);
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: -1.2px;
+}
+
+.newton-story {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 352px));
+    grid-template-rows: minmax(0, 1fr);
+    justify-content: space-between;
+    align-items: end;
+    height: 480px;
+    flex: 0 0 480px;
+    min-height: 0;
+    padding-top: 32px;
+}
+
+.newton-photo {
+    display: block;
+    width: 352px;
+}
+
+.newton-overhead {
+    height: 448px;
+}
+
+.newton-portrait {
+    height: 542px;
+}
+
+.newton-copy {
+    display: flex;
+    height: 100%;
+    padding-top: 44px;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 32px;
+}
+
+.newton-title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: -1.2px;
 }
