@@ -6,16 +6,37 @@
 
 /* 1. Define global variables inside :root */
 :root {
+    /* Color tokens */
     --primary-color: #8C2433;
     --secondary-color: #DFE5EB;
     --tertiary-color: #161616;
+
+    /* Typography tokens */
     --base-font-size: 16px;
     --main-font: 'Helvetica Neue', -apple-system, BlinkMacSystemFont,
         'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
         'Segoe UI Emoji', 'Segoe UI Symbol';
+
+    /* Responsive desktop layout tokens (1024–1920px) */
+    --page-gutter: clamp(32px, 5vw, 64px);
+    --content-max-width: 1440px;
+    --content-inline: max(var(--page-gutter), calc((100vw - var(--content-max-width)) / 2));
+    --grid-gap: clamp(24px, 3.75vw, 48px);
+    --half-column: calc((100vw - 2 * var(--content-inline) - var(--grid-gap)) / 2);
+    --hero-goal-width: min(753px, 58.83vw);
+
+    /* The “Why design” composition is fixed to the 1280px Figma canvas. */
+    --about-content-max-width: 1152px;
+    --about-inline: max(var(--page-gutter), calc((100vw - var(--about-content-max-width)) / 2));
+
+    /* Vertical rhythm tokens */
+    --section-padding-top: 32px;
+    --section-padding-bottom: 48px;
+    --header-height: clamp(88px, 8.75vw, 112px);
+
+    /* Reset tokens */
     --base-padding: 0;
     --base-margin: 0;
-    --header-height: 112px;
 }
 
 /* h1 - 40px h2 - 36px body - 16px */
@@ -138,25 +159,32 @@ header {
     justify-content: space-between;
     height: var(--header-height);
     align-items: center;
-    padding-left: 64px;
-    padding-right: 64px;
+    padding-inline: var(--content-inline);
     background-color: #fff;
+}
+
+header h1 {
+    flex-shrink: 0;
+    font-size: clamp(1.875rem, 3.125vw, 2.5rem);
 }
 
 nav ul {
     display: flex;
     justify-content: space-between;
+    gap: clamp(8px, 1.25vw, 16px);
     list-style: none;
     margin: 0;
     padding: 0;
-    width: 532px;
+    width: var(--half-column);
 }
 
 .nav-link {
+    font-size: clamp(0.75rem, 1.25vw, 1rem);
+    white-space: nowrap;
     text-transform: uppercase;
     text-decoration: none;
     color: var(--tertiary-color);
-    padding: 16px;
+    padding: clamp(10px, 1.25vw, 16px);
 }
 
 .nav-link:hover {
@@ -165,7 +193,6 @@ nav ul {
     color: var(--primary-color);
     background-color: var(--secondary-color);
     border-radius: 4px;
-    padding: 16px;
 }
 
 .nav-link:focus {
@@ -175,7 +202,6 @@ nav ul {
     background-color: var(--secondary-color);
     border-radius: 4px;
     outline: none;
-    padding: 16px;
 }
 
 .text-accent {
@@ -185,7 +211,7 @@ nav ul {
 .content-section {
     height: 100vh;
     scroll-margin-top: var(--header-height);
-    padding: 32px 64px 48px;
+    padding: var(--section-padding-top) var(--content-inline) var(--section-padding-bottom);
 }
 
 .content-section:first-of-type {
@@ -212,7 +238,7 @@ nav ul {
 .hero-section {
     position: relative;
     display: flex;
-    padding: 32px 64px 48px 64px;
+    padding: var(--section-padding-top) var(--content-inline) var(--section-padding-bottom);
     justify-content: space-between;
     align-items: flex-start;
     flex: 1 0 0;
@@ -221,45 +247,52 @@ nav ul {
 }
 
 .hero-poster {
-    display: flex;
-    width: 552px;
-    height: 528px;
-    padding: 96px 0 0 200px;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
-
-    background-color: lightgray;
-    background-image: url(./images/first.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    position: relative;
+    width: min(552px, var(--half-column), calc((100vh - var(--header-height) - var(--section-padding-top) - var(--section-padding-bottom)) * 0.8625));
+    max-height: calc(100vh - var(--header-height) - var(--section-padding-top) - var(--section-padding-bottom));
+    aspect-ratio: 552 / 640;
+    flex-shrink: 0;
+    background: lightgray url("./images/hero-poster.png") center / 100% 100% no-repeat;
 }
 
 .hero-poster-text {
+    position: absolute;
+    top: 15%;
+    left: 36.23%;
+    right: 0;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-    align-self: stretch;
+    gap: clamp(19px, 1.875vw, 24px);
+    font-size: clamp(0.8rem, 1.25vw, 1rem);
+    line-height: 1.5;
+}
+
+@media (max-width: 1100px) {
+    .hero-poster-text {
+        left: 45%;
+        font-size: 0.75rem;
+        line-height: 1.4;
+    }
 }
 
 .hero-photo {
-    width: 552px;
-    height: 352px;
+    width: var(--half-column);
+    aspect-ratio: 552 / 352;
 
-    background: url(./images/second.png) lightgray -301.313px -131.288px / 209.32% 218.464% no-repeat;
+    background: lightgray url("./images/hero-photo.png") center / 100% 100% no-repeat;
 }
 
 .describe-section {
     display: flex;
+    width: var(--hero-goal-width);
     height: 256px;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
 
     position: absolute;
-    right: 63px;
-    bottom: 48px;
+    right: var(--content-inline);
+    bottom: var(--section-padding-bottom);
 }
 
 .describe-text-section {
@@ -269,17 +302,17 @@ nav ul {
 }
 
 .describe-text {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 3.125vw, 2.5rem);
     /* Display */
     font-style: normal;
     font-weight: 500;
-    line-height: 44px;
+    line-height: clamp(36px, 3.44vw, 44px);
     /* 110% */
     letter-spacing: -1.2px;
 }
 
 .links {
-    width: 753px;
+    width: 100%;
     height: 44px;
     flex-shrink: 0;
 }
@@ -435,6 +468,7 @@ nav ul {
 
 .about-section {
     height: auto;
+    padding-inline: var(--about-inline);
     background-color: #fffcfa;
 }
 
@@ -504,21 +538,21 @@ nav ul {
 
 .about-collage {
     display: grid;
-    grid-template-columns: minmax(0, 552px) minmax(0, 552px);
-    gap: 48px;
-    height: 346px;
-    flex: 0 0 346px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--grid-gap);
+    height: clamp(274px, 27.03vw, 346px);
+    flex: 0 0 clamp(274px, 27.03vw, 346px);
 }
 
 .about-mountain {
     background-image: url("./images/about-mountain.png");
     background-repeat: no-repeat;
-    background-size: 552px auto;
+    background-size: 100% auto;
     filter: grayscale(1);
 }
 
 .about-mountain-top {
-    background-position: center -43px;
+    background-position: center calc(-1 * clamp(34px, 3.36vw, 43px));
 }
 
 .about-facts {
@@ -530,22 +564,22 @@ nav ul {
 
 .facts-top {
     display: grid;
-    grid-template-columns: 152px minmax(0, 1fr);
+    grid-template-columns: clamp(100px, 11.875vw, 152px) minmax(0, 1fr);
 }
 
 .facts-count {
     display: flex;
     flex-direction: column;
     color: var(--primary-color);
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 3.125vw, 2.5rem);
     font-weight: 500;
-    line-height: 44px;
+    line-height: clamp(36px, 3.44vw, 44px);
     letter-spacing: -1.2px;
 }
 
 .facts-count strong {
-    height: 128px;
-    font-size: 8.36rem;
+    height: clamp(102px, 10vw, 128px);
+    font-size: clamp(6.7rem, 10.45vw, 8.36rem);
     font-weight: 500;
     line-height: 1;
     letter-spacing: -4px;
@@ -554,7 +588,14 @@ nav ul {
 .fact {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: clamp(8px, 1.25vw, 16px);
+}
+
+@media (max-width: 1100px) {
+    .about-facts .body-regular {
+        font-size: 0.8125rem;
+        line-height: 18px;
+    }
 }
 
 .fact-title {
@@ -571,67 +612,74 @@ nav ul {
 }
 
 .about-mountain-bottom {
-    width: 552px;
-    height: 304px;
+    width: calc((100% - var(--grid-gap)) / 2);
+    height: clamp(241px, 23.75vw, 304px);
     flex-shrink: 0;
-    background-position: center -389px;
+    background-position: center calc(-1 * clamp(308px, 30.39vw, 389px));
 }
 
 .dive-plaque {
     position: absolute;
-    top: 48px;
-    right: 64px;
+    top: clamp(38px, 3.75vw, 48px);
+    right: var(--about-inline);
     z-index: 1;
-    width: 752px;
-    height: 160px;
-    padding: 16px 0 16px 152px;
+    width: min(752px, 58.75vw);
+    height: clamp(128px, 12.5vw, 160px);
+    padding: clamp(12px, 1.25vw, 16px) 0 clamp(12px, 1.25vw, 16px) clamp(96px, 11.875vw, 152px);
     overflow: hidden;
     background-color: var(--secondary-color);
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 3.125vw, 2.5rem);
     font-weight: 500;
-    line-height: 44px;
+    line-height: clamp(35px, 3.44vw, 44px);
     letter-spacing: -1.2px;
 }
 
 .newton-story {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 352px));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-rows: minmax(0, 1fr);
-    justify-content: space-between;
+    column-gap: var(--grid-gap);
     align-items: end;
-    height: 480px;
-    flex: 0 0 480px;
+    height: clamp(384px, 37.5vw, 480px);
+    flex: 0 0 clamp(384px, 37.5vw, 480px);
     min-height: 0;
     padding-top: 32px;
 }
 
 .newton-photo {
     display: block;
-    width: 352px;
+    width: 100%;
+    height: auto;
 }
 
 .newton-overhead {
-    height: 448px;
+    aspect-ratio: 352 / 448;
 }
 
 .newton-portrait {
-    height: 542px;
+    aspect-ratio: 352 / 542;
 }
 
 .newton-copy {
     display: flex;
     height: 100%;
-    padding-top: 44px;
+    min-width: 0;
+    padding-top: clamp(28px, 3.44vw, 44px);
     flex-direction: column;
     justify-content: flex-end;
-    gap: 32px;
+    gap: clamp(24px, 2.5vw, 32px);
 }
 
 .newton-title {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 3.125vw, 2.5rem);
     font-weight: 500;
-    line-height: 44px;
+    line-height: clamp(36px, 3.44vw, 44px);
     letter-spacing: -1.2px;
+}
+
+.newton-copy .body-regular {
+    font-size: clamp(0.875rem, 1.25vw, 1rem);
+    line-height: clamp(20px, 1.875vw, 24px);
 }
 
 /*---- контакты ----*/
