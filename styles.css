@@ -25,9 +25,10 @@
     --half-column: calc((100vw - 2 * var(--content-inline) - var(--grid-gap)) / 2);
     --hero-goal-width: min(753px, 58.83vw);
 
-    /* The “Why design” composition is fixed to the 1280px Figma canvas. */
-    --about-content-max-width: 1152px;
-    --about-inline: max(var(--page-gutter), calc((100vw - var(--about-content-max-width)) / 2));
+    /* Figma uses a 1152px content grid inside the 1280px desktop canvas. */
+    --fixed-layout-max-width: 1152px;
+    --fixed-layout-inline: max(var(--page-gutter), calc((100vw - var(--fixed-layout-max-width)) / 2));
+    --hero-media-width: min(552px, var(--half-column), calc((100vh - var(--header-height) - var(--section-padding-top) - var(--section-padding-bottom)) * 0.8625));
 
     /* Vertical rhythm tokens */
     --section-padding-top: 32px;
@@ -272,7 +273,7 @@ nav ul {
 .hero-section {
     position: relative;
     display: flex;
-    padding: var(--section-padding-top) var(--content-inline) var(--section-padding-bottom);
+    padding: var(--section-padding-top) var(--fixed-layout-inline) var(--section-padding-bottom);
     justify-content: space-between;
     align-items: flex-start;
     flex: 1 0 0;
@@ -282,7 +283,7 @@ nav ul {
 
 .hero-poster {
     position: relative;
-    width: min(552px, var(--half-column), calc((100vh - var(--header-height) - var(--section-padding-top) - var(--section-padding-bottom)) * 0.8625));
+    width: var(--hero-media-width);
     max-height: calc(100vh - var(--header-height) - var(--section-padding-top) - var(--section-padding-bottom));
     aspect-ratio: 552 / 640;
     flex-shrink: 0;
@@ -310,7 +311,7 @@ nav ul {
 }
 
 .hero-photo {
-    width: var(--half-column);
+    width: var(--hero-media-width);
     aspect-ratio: 552 / 352;
 
     background: lightgray url("./images/hero-photo.png") center / 100% 100% no-repeat;
@@ -325,8 +326,16 @@ nav ul {
     align-items: flex-start;
 
     position: absolute;
-    right: var(--content-inline);
+    right: var(--fixed-layout-inline);
     bottom: var(--section-padding-bottom);
+}
+
+@media (min-width: 1101px) {
+    .describe-section {
+        top: calc(var(--section-padding-top) + var(--hero-media-width) * 0.637681 + 32px);
+        bottom: var(--section-padding-bottom);
+        height: auto;
+    }
 }
 
 .describe-text-section {
@@ -436,6 +445,7 @@ nav ul {
     height: calc(100vh - var(--header-height));
     display: flex;
     flex-direction: column;
+    padding-inline: var(--fixed-layout-inline);
     background-color: #fffcfa;
 }
 
@@ -484,7 +494,7 @@ nav ul {
 
 .expirience-table .expirience-row .column-date-university .column-university {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 10px;
     flex: 1 0 0;
@@ -502,7 +512,7 @@ nav ul {
 
 .about-section {
     height: auto;
-    padding-inline: var(--about-inline);
+    padding-inline: var(--fixed-layout-inline);
     background-color: #fffcfa;
 }
 
@@ -576,6 +586,7 @@ nav ul {
     gap: var(--grid-gap);
     height: clamp(274px, 27.03vw, 346px);
     flex: 0 0 clamp(274px, 27.03vw, 346px);
+    margin-top: auto;
 }
 
 .about-mountain {
@@ -655,7 +666,7 @@ nav ul {
 .dive-plaque {
     position: absolute;
     top: clamp(38px, 3.75vw, 48px);
-    right: var(--about-inline);
+    right: var(--fixed-layout-inline);
     z-index: 1;
     width: min(752px, 58.75vw);
     height: clamp(128px, 12.5vw, 160px);
