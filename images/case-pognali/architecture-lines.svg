@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1152 377" fill="none">
+  <g stroke="#C9C9C9" stroke-width="1">
+    <!-- Main menu to the four primary areas -->
+    <path d="M576 59L65 140"/>
+    <path d="M576 59L364 140"/>
+    <path d="M576 59L707 141"/>
+    <path d="M576 59L1024 140"/>
+
+    <!-- Relationship between content and the user profile -->
+    <path d="M518 189L597 189"/>
+
+    <!-- Search and feed connect directly to the relevant detail page -->
+    <path d="M65 237L232 348"/>
+    <path d="M1024 237L925 348"/>
+
+    <!-- Video and profile both connect to tour and organiser pages -->
+    <path d="M364 237L364 319"/>
+    <path d="M364 237L757 318"/>
+    <path d="M707 237L372 319"/>
+    <path d="M707 237L757 318"/>
+
+    <!-- Detail pages are related to each other -->
+    <path d="M516 348L595 348"/>
+  </g>
+</svg>

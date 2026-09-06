@@ -8,13 +8,14 @@
     <title>Портфолио Анна Семенова</title>
 
     <link rel="stylesheet" href="styles.css?v=18" />
+    <link rel="stylesheet" href="site-header.css?v=1" />
 
 
 </head>
 
 <body>
 
-    <header>
+    <header class="site-header">
         <h1><a class="home-link" href="#hero" aria-label="Вернуться в начало страницы">ПРИВЕТ, НА СВЯЗИ <span
                     class="text-accent">АНЯ</span></a></h1>
 
@@ -297,22 +298,7 @@
             </div>
         </section>
     </main>
-    <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navigation = document.querySelector('nav');
-
-        menuToggle?.addEventListener('click', () => {
-            const isOpen = navigation.classList.toggle('is-open');
-            menuToggle.setAttribute('aria-expanded', String(isOpen));
-            menuToggle.textContent = isOpen ? 'ЗАКРЫТЬ' : 'МЕНЮ';
-        });
-
-        navigation?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
-            navigation.classList.remove('is-open');
-            menuToggle?.setAttribute('aria-expanded', 'false');
-            if (menuToggle) menuToggle.textContent = 'МЕНЮ';
-        }));
-    </script>
+    <script src="site-header.js" defer></script>
 </body>
 
 </html>

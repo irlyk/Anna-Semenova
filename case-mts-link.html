@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>МТС Линк — кейс Анны Семеновой</title>
     <link rel="stylesheet" href="case-pognali.css">
+    <link rel="stylesheet" href="site-header.css">
 </head>
 <body>
-    <header class="case-header">
-        <a class="case-home" href="index.html">ПРИВЕТ, НА СВЯЗИ <span>АНЯ</span></a>
+    <header class="site-header">
+        <h1><a class="home-link" href="index.html">ПРИВЕТ, НА СВЯЗИ <span class="text-accent">АНЯ</span></a></h1>
         <nav aria-label="Навигация по портфолио">
-            <a href="index.html#projects">Проекты</a>
-            <a href="index.html#background">Бэкграунд</a>
-            <a href="index.html#reasons">Почему дизайн</a>
-            <a href="index.html#contacts">Контакты</a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mts-navigation">МЕНЮ</button>
+            <ul id="mts-navigation">
+                <li><a class="nav-link" href="index.html#projects">Проекты</a></li>
+                <li><a class="nav-link" href="index.html#background">Бэкграунд</a></li>
+                <li><a class="nav-link" href="index.html#reasons">Почему дизайн</a></li>
+                <li><a class="nav-link" href="index.html#contacts">Контакты</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -34,5 +38,6 @@
             <a class="case-next-link" href="case-foliant.html" aria-label="Открыть следующий проект — Фолиант"></a>
         </section>
     </main>
+    <script src="site-header.js" defer></script>
 </body>
 </html>
