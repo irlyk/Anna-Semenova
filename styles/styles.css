@@ -867,7 +867,7 @@ nav ul {
     left: -64px;
     width: 1280px;
     height: 135px;
-    background: url("../images/contacts-grid.png") center / 100% 100% no-repeat;
+    background: url("../images/hero-grid.svg") center / 100% 100% no-repeat;
 }
 
 .contacts-goal-text {
