@@ -687,3 +687,772 @@
         object-fit: contain;
     }
 }
+
+/* Mobile MTS Link case: Figma node 601:3029. */
+@media (max-width: 767px) {
+    body.case-body--mts {
+        min-width: 0;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.07px;
+    }
+
+    .case-body--mts .site-header {
+        padding: 16px var(--mobile-gutter);
+    }
+
+    .case-page--mts,
+    .case-body--mts .case-footer {
+        width: 100%;
+        max-width: none;
+    }
+
+    .case-page--mts .mts-section,
+    .case-body--mts .case-footer {
+        display: flex;
+        min-height: 0;
+        padding: var(--mobile-section-padding) var(--mobile-gutter);
+        flex-direction: column;
+        gap: var(--mobile-layout-gap);
+        overflow: hidden;
+    }
+
+    .case-page--mts .mts-section > * + * {
+        margin-top: 0;
+    }
+
+    .case-page--mts .section-label,
+    .case-body--mts .case-footer .section-label {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 34px;
+        letter-spacing: -0.84px;
+    }
+
+    .case-page--mts .mts-display {
+        max-width: none;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 32px;
+        letter-spacing: -0.72px;
+    }
+
+    .case-page--mts .mts-two,
+    .case-page--mts .mts-three,
+    .case-page--mts .mts-four {
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    /* 01 / Cover */
+    .case-page--mts .mts-cover {
+        min-height: 1888px;
+    }
+
+    .case-page--mts .mts-kicker-row {
+        display: flex;
+        height: 48px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 8px;
+    }
+
+    .case-page--mts .mts-kicker-row p:last-child {
+        font-size: 14px;
+        line-height: 20px;
+        text-align: left;
+        word-spacing: 0;
+    }
+
+    .case-page--mts .mts-title {
+        font-size: 56px;
+        font-weight: 700;
+        line-height: 64px;
+        letter-spacing: -0.84px;
+    }
+
+    .case-page--mts .mts-intro {
+        display: flex;
+        height: 228px;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .case-page--mts .mts-intro > .mts-display {
+        min-height: 96px;
+    }
+
+    .case-page--mts .mts-meta {
+        height: 116px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 12px;
+        text-align: left;
+    }
+
+    .case-page--mts .mts-meta > span {
+        display: flex;
+        min-height: 44px;
+        align-items: flex-end;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+
+    .case-page--mts .mts-cover-media {
+        display: flex;
+        height: 1412px;
+        padding: 0;
+        flex-direction: column;
+        gap: 12px;
+        background: transparent;
+    }
+
+    .case-page--mts .mts-cover-media img {
+        width: 100%;
+        height: 700px;
+        flex: 0 0 700px;
+        object-fit: cover;
+    }
+
+    /* 02 / Project context */
+    .case-page--mts > .mts-section:nth-of-type(2) {
+        min-height: 776px;
+        background: var(--white-color);
+    }
+
+    .case-page--mts .mts-project {
+        height: 654px;
+        gap: 16px;
+    }
+
+    .case-page--mts .mts-project > div {
+        height: 300px;
+        gap: 20px;
+    }
+
+    .case-page--mts .mts-project .mts-panel {
+        height: 338px;
+        padding: 28px;
+        gap: 20px;
+        overflow: hidden;
+    }
+
+    .case-page--mts .mts-medium {
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: -0.1px;
+    }
+
+    /* 03 / Client brief */
+    .case-page--mts > .mts-section:nth-of-type(3) {
+        min-height: 882px;
+    }
+
+    .case-page--mts .mts-brief > .mts-display {
+        min-height: 96px;
+    }
+
+    .case-page--mts .mts-problems {
+        height: 476px;
+    }
+
+    .case-page--mts .mts-problems article {
+        width: 100%;
+    }
+
+    .case-page--mts .mts-problems article:first-child {
+        height: 256px;
+    }
+
+    .case-page--mts .mts-problems article:last-child {
+        height: 204px;
+    }
+
+    .case-page--mts .mts-card {
+        padding: 24px;
+    }
+
+    .case-page--mts .mts-task {
+        min-height: 140px;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: -0.1px;
+    }
+
+    /* 04 / Research */
+    .case-page--mts > .mts-section:nth-of-type(4) {
+        min-height: 2359px;
+        background: var(--white-color);
+    }
+
+    .case-page--mts .mts-research > .mts-display {
+        min-height: 96px;
+    }
+
+    .case-page--mts .mts-process {
+        display: flex;
+        height: 458px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .case-page--mts .mts-process article {
+        width: 100%;
+        height: 82px;
+        padding: 16px;
+        flex: 0 0 82px;
+        gap: 8px;
+    }
+
+    .case-page--mts .mts-note-filled {
+        height: 312px;
+        min-height: 312px;
+        padding: 24px 0 0 24px;
+        grid-template-columns: 150px 128px;
+        gap: 24px;
+        overflow: hidden;
+    }
+
+    .case-page--mts .mts-detail {
+        display: flex;
+        height: auto;
+        padding: 32px;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .case-page--mts .mts-detail header {
+        height: 108px;
+        flex: 0 0 108px;
+        overflow: hidden;
+    }
+
+    .case-page--mts .mts-detail header h3 {
+        margin-top: 8px;
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .case-page--mts .mts-detail-grid {
+        display: flex;
+        margin-top: 0;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .case-page--mts .mts-detail-grid article {
+        width: 100%;
+        height: auto;
+        padding: 24px;
+        flex: none;
+        gap: 16px;
+    }
+
+    .case-page--mts .mts-research .mts-detail {
+        height: 1299px;
+    }
+
+    .case-page--mts .mts-research .mts-detail-grid article:nth-child(1) {
+        height: 377px;
+    }
+
+    .case-page--mts .mts-research .mts-detail-grid article:nth-child(2) {
+        height: 358px;
+    }
+
+    .case-page--mts .mts-research .mts-detail-grid article:nth-child(3) {
+        height: 336px;
+    }
+
+    .case-page--mts .mts-detail-grid h4 {
+        min-height: 28px;
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .case-page--mts .mts-detail-grid article > p {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .case-page--mts .mts-detail-grid small {
+        padding-top: 16px;
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+    /* 05 / Interview insights */
+    .case-page--mts > .mts-section:nth-of-type(5) {
+        min-height: 1164px;
+    }
+
+    .case-page--mts > .mts-section:nth-of-type(5) > .mts-display {
+        min-height: 128px;
+    }
+
+    .case-page--mts .meeting-types {
+        height: 530px;
+    }
+
+    .case-page--mts .meeting-types article {
+        height: 174px;
+        padding: 24px;
+    }
+
+    .case-page--mts .meeting-types article:first-child {
+        height: 150px;
+    }
+
+    .case-page--mts .segments {
+        height: 336px;
+    }
+
+    .case-page--mts .segments article {
+        height: 160px;
+        padding: 24px;
+    }
+
+    /* 06 / Product concept */
+    .case-page--mts > .mts-section:nth-of-type(6) {
+        min-height: 1692px;
+        background: var(--white-color);
+    }
+
+    .case-page--mts > .mts-section:nth-of-type(6) > .mts-copy-row {
+        height: 172px;
+        min-height: 172px;
+        gap: 12px;
+    }
+
+    .case-page--mts .lifecycle {
+        height: 428px;
+    }
+
+    .case-page--mts .lifecycle article {
+        height: 132px;
+        padding: 24px 0 0 24px;
+    }
+
+    .case-page--mts .architecture {
+        height: 922px;
+        border-color: var(--border-color);
+    }
+
+    .case-page--mts .architecture header {
+        height: 88px;
+        flex-basis: 88px;
+    }
+
+    .case-page--mts .architecture-stages {
+        display: flex;
+        height: 557px;
+        margin-top: 0;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .case-page--mts .architecture-stages article {
+        width: 100%;
+        height: 122px;
+        padding: 20px;
+        flex: 0 0 122px;
+    }
+
+    .case-page--mts .architecture-stages article:nth-child(3) {
+        height: 143px;
+        flex-basis: 143px;
+    }
+
+    .case-page--mts .architecture-stages h4 {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 28px;
+    }
+
+    .case-page--mts .architecture-stages p {
+        margin-top: 12px;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .case-page--mts .architecture-hub {
+        display: flex;
+        height: 165px;
+        margin-top: 0;
+        padding: 16px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .case-page--mts .architecture-hub b {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+    .case-page--mts .architecture-hub p {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    /* 07 / Meeting rooms */
+    .case-page--mts > .mts-section:nth-of-type(7) {
+        min-height: 540px;
+    }
+
+    .case-page--mts > .mts-section:nth-of-type(7) > .section-label {
+        min-height: 68px;
+    }
+
+    .case-page--mts .mts-rooms .mts-copy-row {
+        height: 172px;
+        min-height: 172px;
+        gap: 12px;
+    }
+
+    .case-page--mts .room-flow {
+        height: 188px;
+    }
+
+    .case-page--mts .room-flow article {
+        height: 52px;
+        padding: 28px 0 0 24px;
+        flex: 0 0 52px;
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    /* Full-width screens between sections 06 and 07. */
+    .case-page--mts .mts-screens {
+        display: flex;
+        height: 461px;
+        padding: 0 var(--mobile-gutter) 32px;
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .case-page--mts .mts-screens img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 350 / 190.43;
+        object-fit: cover;
+    }
+
+    /* 08 / Team result */
+    .case-page--mts > .mts-section:nth-of-type(9) {
+        min-height: 890px;
+    }
+
+    .case-page--mts > .mts-section:nth-of-type(9) > .section-label {
+        min-height: 68px;
+    }
+
+    .case-page--mts > .mts-section:nth-of-type(9) > .mts-copy-row {
+        height: 172px;
+        min-height: 172px;
+        gap: 12px;
+    }
+
+    .case-page--mts .behance-embed {
+        height: 430px;
+        flex: 0 0 430px;
+    }
+
+    .case-page--mts > .mts-section:nth-of-type(9) > .mts-note {
+        height: 84px;
+        min-height: 84px;
+        padding: 20px 0 0 24px;
+        grid-template-columns: 120px 182px;
+        gap: 24px;
+        overflow: hidden;
+    }
+
+    /* 09 / Concept testing */
+    .case-page--mts > .mts-section:nth-of-type(10) {
+        min-height: 2139px;
+        background: var(--white-color);
+    }
+
+    .case-page--mts > .mts-section:nth-of-type(10) > .section-label {
+        min-height: 68px;
+    }
+
+    .case-page--mts .mts-testing > .mts-copy-row {
+        height: 172px;
+        min-height: 172px;
+        gap: 12px;
+    }
+
+    .case-page--mts .mts-testing .mts-copy-row > .mts-display {
+        min-height: 64px;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.72px;
+    }
+
+    .case-page--mts .test-tasks {
+        height: 384px;
+    }
+
+    .case-page--mts .test-tasks article {
+        height: 84px;
+        padding: 24px 20px 0;
+        flex: 0 0 84px;
+    }
+
+    .case-page--mts .mts-testing > .mts-note {
+        height: 178px;
+        min-height: 178px;
+        padding: 24px 0 0 24px;
+        grid-template-columns: 120px 182px;
+        gap: 24px;
+        overflow: hidden;
+    }
+
+    .case-page--mts .mts-testing > .mts-note p {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .case-page--mts .evidence {
+        height: 1177px;
+    }
+
+    .case-page--mts .evidence header {
+        height: 80px;
+        flex-basis: 80px;
+    }
+
+    .case-page--mts .evidence header h3 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .case-page--mts .evidence .mts-detail-grid {
+        height: 1009px;
+    }
+
+    .case-page--mts .evidence .mts-detail-grid article {
+        height: 332px;
+        gap: 14px;
+    }
+
+    .case-page--mts .evidence .mts-detail-grid article:first-child {
+        height: 313px;
+    }
+
+    .case-page--mts .evidence .mts-detail-grid h4 {
+        min-height: 48px;
+        font-size: 17px;
+        line-height: 23px;
+    }
+
+    /* 10 / Result and reflection */
+    .case-page--mts > .mts-section:nth-of-type(11) {
+        min-height: 1356px;
+    }
+
+    .case-page--mts > .mts-section:nth-of-type(11) > .section-label {
+        min-height: 68px;
+    }
+
+    .case-page--mts > .mts-section:nth-of-type(11) > .mts-display {
+        min-height: 96px;
+    }
+
+    .case-page--mts .result-cards {
+        height: 1080px;
+    }
+
+    .case-page--mts .result-cards > article {
+        height: 552px;
+        padding: 28px;
+        flex: 0 0 552px;
+    }
+
+    .case-page--mts .result-cards > article:first-child {
+        height: 512px;
+        flex-basis: 512px;
+    }
+
+    /* 11 / Footer */
+    .case-body--mts .case-footer {
+        min-height: 480px;
+        background: var(--secondary-color);
+    }
+
+    .case-body--mts .next-project {
+        width: 100%;
+        height: 68px;
+        margin-top: 0;
+        font-size: 64px;
+        line-height: 68px;
+        letter-spacing: -1.92px;
+    }
+
+    .case-body--mts .case-footer-bottom {
+        display: flex;
+        height: 130px;
+        align-items: stretch;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .case-body--mts .case-footer dl {
+        display: flex;
+        width: 100%;
+        margin: 0;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .case-body--mts .case-footer dt:nth-of-type(2) {
+        order: 2;
+    }
+
+    .case-body--mts .case-footer dd:nth-of-type(1) {
+        margin-top: 4px;
+        order: 3;
+    }
+
+    .case-body--mts .case-footer dd:nth-of-type(2) {
+        order: 4;
+    }
+
+    .case-body--mts .case-footer-bottom > p {
+        align-self: flex-end;
+        font-size: 40px;
+        line-height: 38px;
+    }
+}
+
+/* Mobile content-safety fixes for known Figma frame-height issues. */
+@media (max-width: 767px) {
+    /* Keep the cover screenshots complete, on the same dark stage as desktop. */
+    .case-page--mts .mts-cover {
+        min-height: 0;
+    }
+
+    .case-page--mts .mts-cover-media {
+        height: auto;
+        padding: 24px 0;
+        gap: 48px;
+        background: var(--tertiary-color);
+    }
+
+    .case-page--mts .mts-cover-media img {
+        height: auto;
+        aspect-ratio: 350 / 190.43;
+        flex-basis: auto;
+        object-fit: cover;
+    }
+
+    /* Cards grow with their copy and always keep a visible bottom inset. */
+    .case-page--mts .mts-project,
+    .case-page--mts .mts-problems,
+    .case-page--mts .meeting-types,
+    .case-page--mts .segments,
+    .case-page--mts .lifecycle,
+    .case-page--mts .room-flow,
+    .case-page--mts .test-tasks,
+    .case-page--mts .result-cards {
+        height: auto;
+    }
+
+    .case-page--mts .mts-project .mts-panel {
+        height: auto;
+        min-height: 366px;
+        padding: 24px;
+        overflow: visible;
+    }
+
+    .case-page--mts .mts-problems article:first-child,
+    .case-page--mts .mts-problems article:last-child,
+    .case-page--mts .meeting-types article,
+    .case-page--mts .meeting-types article:first-child,
+    .case-page--mts .segments article,
+    .case-page--mts .lifecycle article,
+    .case-page--mts .room-flow article,
+    .case-page--mts .test-tasks article,
+    .case-page--mts .result-cards > article,
+    .case-page--mts .result-cards > article:first-child {
+        height: auto;
+        flex-basis: auto;
+    }
+
+    .case-page--mts .mts-card,
+    .case-page--mts .meeting-types article,
+    .case-page--mts .segments article,
+    .case-page--mts .lifecycle article {
+        padding: 24px;
+    }
+
+    .case-page--mts .mts-note-filled {
+        height: auto;
+        min-height: 0;
+        padding: 24px;
+        grid-template-columns: 120px minmax(0, 1fr);
+        overflow: visible;
+    }
+
+    .case-page--mts .room-flow article {
+        min-height: 56px;
+        padding: 16px 24px;
+        align-items: center;
+    }
+
+    .case-page--mts .test-tasks article {
+        min-height: 92px;
+        padding: 16px 20px;
+    }
+
+    /* The Figma frames are shorter than their titles; content defines the height. */
+    .case-page--mts .mts-detail,
+    .case-page--mts .mts-research .mts-detail,
+    .case-page--mts .architecture,
+    .case-page--mts .evidence,
+    .case-page--mts .evidence .mts-detail-grid {
+        height: auto;
+    }
+
+    .case-page--mts .mts-detail header,
+    .case-page--mts .architecture header,
+    .case-page--mts .evidence header {
+        height: auto;
+        min-height: 0;
+        flex-basis: auto;
+        overflow: visible;
+    }
+
+    .case-page--mts .mts-research .mts-detail-grid article:nth-child(1),
+    .case-page--mts .mts-research .mts-detail-grid article:nth-child(2),
+    .case-page--mts .mts-research .mts-detail-grid article:nth-child(3),
+    .case-page--mts .evidence .mts-detail-grid article,
+    .case-page--mts .evidence .mts-detail-grid article:first-child {
+        height: auto;
+        min-height: 0;
+    }
+
+    .case-page--mts .mts-detail-grid h4,
+    .case-page--mts .evidence .mts-detail-grid h4 {
+        height: auto;
+        min-height: 0;
+    }
+
+    /* Notes use the same spacing scale and cannot clip their right-hand copy. */
+    .case-page--mts > .mts-section:nth-of-type(9) > .mts-note,
+    .case-page--mts .mts-testing > .mts-note {
+        height: auto;
+        min-height: 0;
+        padding: 24px;
+        grid-template-columns: 96px minmax(0, 1fr);
+        overflow: visible;
+    }
+}
