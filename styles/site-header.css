@@ -1,6 +1,4 @@
 /* Shared navigation for the portfolio and every case page. */
-:root { --site-header-height: clamp(88px, 8.75vw, 112px); }
-
 .site-header {
     position: sticky;
     z-index: 100;
@@ -12,7 +10,7 @@
     padding: 48px 64px 20px;
     align-items: flex-start;
     justify-content: space-between;
-    background: rgba(255, 252, 250, 0.92);
+    background: rgb(from var(--surface-color) r g b / 0.92);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
@@ -26,11 +24,20 @@
     letter-spacing: -1.2px;
 }
 
-.site-header .home-link { color: #161616; text-decoration: none; }
+.site-header .home-link {
+    color: var(--tertiary-color);
+    text-decoration: none;
+}
+
 .site-header .text-accent,
-.site-header .home-link span { color: #8c2433; }
+.site-header .home-link span {
+    color: var(--primary-color);
+}
+
 .site-header nav,
-.site-header nav ul { width: 552px; }
+.site-header nav ul {
+    width: 552px;
+}
 
 .site-header nav ul {
     display: flex;
@@ -45,7 +52,7 @@
     display: block;
     min-height: 44px;
     padding: 0;
-    color: #161616;
+    color: var(--tertiary-color);
     font-size: 16px;
     line-height: 24px;
     text-transform: uppercase;
@@ -55,16 +62,34 @@
 
 .site-header .nav-link:hover,
 .site-header .nav-link:focus-visible,
-.site-header .home-link:focus-visible { color: #8c2433; background: none; outline: none; }
-.site-header .menu-toggle { display: none; }
+.site-header .home-link:focus-visible {
+    color: var(--primary-color);
+    background: none;
+    outline: none;
+}
+
+.site-header .menu-toggle {
+    display: none;
+}
 
 @media (min-width: 768px) and (max-width: 1100px) {
-    .site-header { padding: clamp(32px, 3.75vw, 48px) 40px 16px; }
+    .site-header {
+        padding: clamp(32px, 3.75vw, 48px) 40px 16px;
+    }
+
     .site-header h1,
     .site-header nav,
-    .site-header nav ul { width: calc((100% - 48px) / 2); }
-    .site-header h1 { font-size: clamp(30px, 3.125vw, 40px); }
-    .site-header .nav-link { font-size: clamp(12px, 1.25vw, 16px); }
+    .site-header nav ul {
+        width: calc((100% - 48px) / 2);
+    }
+
+    .site-header h1 {
+        font-size: clamp(30px, 3.125vw, 40px);
+    }
+
+    .site-header .nav-link {
+        font-size: clamp(12px, 1.25vw, 16px);
+    }
 }
 
 @media (max-width: 767px) {
@@ -81,14 +106,16 @@
     }
 
     .site-header nav,
-    .site-header nav ul { width: auto; }
+    .site-header nav ul {
+        width: auto;
+    }
 
     .site-header .menu-toggle {
         display: block;
         min-height: 32px;
         padding: 0;
         border: 0;
-        color: #161616;
+        color: var(--tertiary-color);
         background: transparent;
         font: inherit;
         font-size: 14px;
@@ -104,9 +131,16 @@
         padding: 12px 20px 20px;
         flex-direction: column;
         gap: 0;
-        background: rgba(255, 252, 250, 0.98);
+        background: rgb(from var(--surface-color) r g b / 0.98);
     }
 
-    .site-header nav.is-open ul { display: flex; }
-    .site-header .nav-link { width: 100%; padding: 10px 0; font-size: 16px; }
+    .site-header nav.is-open ul {
+        display: flex;
+    }
+
+    .site-header .nav-link {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+    }
 }

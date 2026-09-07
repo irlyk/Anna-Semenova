@@ -10,18 +10,6 @@
 
 /* 1. Define global variables inside :root */
 :root {
-    /* Color tokens */
-    --primary-color: #8C2433;
-    --secondary-color: #DFE5EB;
-    --tertiary-color: #161616;
-    --surface-color: #FFFCFA;
-
-    /* Typography tokens */
-    --base-font-size: 16px;
-    --main-font: 'Helvetica Neue', -apple-system, BlinkMacSystemFont,
-        'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
-        'Segoe UI Emoji', 'Segoe UI Symbol';
-
     /* Responsive desktop layout tokens (1024–1920px) */
     --page-gutter: clamp(32px, 5vw, 64px);
     --canvas-width: min(100vw, 1280px);
@@ -40,14 +28,7 @@
     --section-padding-top: 32px;
     --section-padding-bottom: 48px;
     --header-height: clamp(88px, 8.75vw, 112px);
-
-    /* Reset tokens */
-    --base-padding: 0;
-    --base-margin: 0;
 }
-
-/* h1 - 40px h2 - 36px body - 16px */
-
 
 /* 2. Use them anywhere in your stylesheet */
 html {
@@ -62,14 +43,17 @@ html {
 }
 
 body {
-    margin: 0;
     min-height: 100%;
+
     padding: var(--base-padding);
     margin: var(--base-margin);
-    font-family: var(--main-font);
+
+    font-family: var(--base-font-family);
     font-size: var(--base-font-size);
+    line-height: var(--base-line-height);
+
     color: var(--tertiary-color);
-    background-color: #fff;
+    background-color: var(--surface-color);
 }
 
 header,
@@ -317,7 +301,7 @@ nav ul {
     max-height: calc(100vh - var(--header-height) - var(--section-padding-top) - var(--section-padding-bottom));
     aspect-ratio: 552 / 640;
     flex-shrink: 0;
-    background: lightgray url("./images/hero-poster.png") center / 100% 100% no-repeat;
+    background: lightgray url("../images/hero-poster.png") center / 100% 100% no-repeat;
 }
 
 .hero-poster-text {
@@ -344,7 +328,7 @@ nav ul {
     width: var(--hero-media-width);
     aspect-ratio: 552 / 352;
 
-    background: lightgray url("./images/hero-photo.png") center / 100% 100% no-repeat;
+    background: lightgray url("../images/hero-photo.png") center / 100% 100% no-repeat;
 }
 
 .describe-section {
@@ -384,7 +368,7 @@ nav ul {
     left: 1px;
     width: 752px;
     height: 135px;
-    background: url("./images/hero-grid.svg") center / 100% 100% no-repeat;
+    background: url("../images/hero-grid.svg") center / 100% 100% no-repeat;
 }
 
 .describe-text {
@@ -469,6 +453,8 @@ nav ul {
     min-width: 0;
     min-height: 0;
     overflow: hidden;
+
+    border: var(--border-size) solid var(--border-color);
 }
 
 .project-copy {
@@ -695,7 +681,7 @@ nav ul {
 }
 
 .about-mountain {
-    background-image: url("./images/about-mountain.png");
+    background-image: url("../images/about-mountain.png");
     background-repeat: no-repeat;
     background-size: 100% auto;
     filter: grayscale(1);
@@ -881,7 +867,7 @@ nav ul {
     left: -64px;
     width: 1280px;
     height: 135px;
-    background: url("./images/contacts-grid.png") center / 100% 100% no-repeat;
+    background: url("../images/contacts-grid.png") center / 100% 100% no-repeat;
 }
 
 .contacts-goal-text {
@@ -1320,7 +1306,7 @@ nav ul {
         padding-top: 444px;
         aspect-ratio: auto;
         flex-direction: column;
-        background: url("./images/mobile-hero-primary.png") top center / 100% 420px no-repeat;
+        background: url("../images/mobile-hero-primary.png") top center / 100% 420px no-repeat;
     }
 
     .hero-poster-text {
@@ -1341,7 +1327,7 @@ nav ul {
         width: var(--mobile-content);
         height: 218px;
         aspect-ratio: auto;
-        background: url("./images/mobile-hero-secondary.png") center / 100% 100% no-repeat;
+        background: url("../images/mobile-hero-secondary.png") center / 100% 100% no-repeat;
     }
 
     .describe-section {
@@ -1615,7 +1601,7 @@ nav ul {
     .about-mountain-top {
         width: 100%;
         height: 420px;
-        background: url("./images/mobile-mountain.png") center / 100% 100% no-repeat;
+        background: url("../images/mobile-mountain.png") center / 100% 100% no-repeat;
         filter: none;
     }
 
@@ -1798,7 +1784,7 @@ nav ul {
         font-size: 1.875rem;
         line-height: 32px;
         letter-spacing: -0.3px;
-        background: url("./images/mobile-contacts-grid.svg") center / 100% 100% no-repeat;
+        background: url("../images/mobile-contacts-grid.svg") center / 100% 100% no-repeat;
     }
 
     .contacts-goal-text br {
