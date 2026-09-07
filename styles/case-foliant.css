@@ -160,6 +160,10 @@
     max-width: none;
 }
 
+.foliant-cover-mobile {
+    display: none;
+}
+
 /* 01 / Task */
 .foliant-task {
     min-height: 720px;
@@ -847,5 +851,513 @@
         grid-template-columns: minmax(0, 792px) 318px;
         transform: scale(.8194);
         transform-origin: top left;
+    }
+}
+
+/* Mobile / 390px Figma layout. The sections keep content-led heights so text does
+   not get clipped when a browser renders the font a little differently. */
+@media (max-width: 767px) {
+    .case-body--foliant {
+        min-width: 0;
+    }
+
+    .case-page--foliant,
+    .case-body--foliant .case-footer {
+        width: 100%;
+        max-width: none;
+    }
+
+    .case-page--foliant .foliant-section,
+    .case-body--foliant .case-footer {
+        min-height: 0;
+        height: auto;
+        padding: var(--mobile-section-padding) var(--mobile-gutter);
+        overflow: hidden;
+    }
+
+    .case-page--foliant .foliant-section:not(.foliant-cover)>*+* {
+        margin-top: var(--mobile-layout-gap);
+    }
+
+    .case-page--foliant .section-label,
+    .case-body--foliant .case-footer .section-label {
+        width: 100%;
+        font-size: 36px;
+        line-height: 34px;
+        letter-spacing: -1.08px;
+    }
+
+    .case-page--foliant .foliant-task>.section-label {
+        font-size: 28px;
+        letter-spacing: -.84px;
+    }
+
+    .case-page--foliant .foliant-display {
+        width: 100%;
+        max-width: none;
+        font-size: 40px;
+        line-height: 44px;
+        letter-spacing: -1.2px;
+    }
+
+    .case-page--foliant .foliant-copy,
+    .case-page--foliant .foliant-two,
+    .case-page--foliant .foliant-three,
+    .case-page--foliant .foliant-four {
+        display: grid;
+        width: 100%;
+        height: auto;
+        grid-template-columns: 1fr;
+        gap: var(--mobile-card-gap);
+    }
+
+    /* Cover */
+    .case-page--foliant .foliant-cover {
+        min-height: 0;
+    }
+
+    .case-page--foliant .foliant-cover-device {
+        display: none;
+    }
+
+    .case-page--foliant .foliant-kicker-row {
+        display: flex;
+        height: 56px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 8px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .case-page--foliant .foliant-kicker-row p:last-child {
+        text-align: left;
+    }
+
+    .case-page--foliant .foliant-title {
+        margin-top: var(--mobile-layout-gap);
+        font-size: 40px;
+        line-height: 44px;
+        letter-spacing: -1.2px;
+    }
+
+    .case-page--foliant .foliant-intro {
+        display: flex;
+        height: 272px;
+        margin-top: var(--mobile-layout-gap);
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .case-page--foliant .foliant-intro>.foliant-display {
+        width: 100%;
+    }
+
+    .case-page--foliant .foliant-meta {
+        width: 100%;
+        align-items: flex-start;
+        gap: 12px;
+        text-align: left;
+    }
+
+    .case-page--foliant .foliant-meta span {
+        min-height: 0;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .case-page--foliant .foliant-cover-mobile {
+        display: grid;
+        width: 100%;
+        margin-top: var(--mobile-layout-gap);
+        gap: var(--mobile-card-gap);
+    }
+
+    .case-page--foliant .foliant-mobile-phone {
+        position: relative;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 2;
+        overflow: hidden;
+    }
+
+    .case-page--foliant .foliant-mobile-screen {
+        position: absolute;
+        z-index: 0;
+        top: 1.989%;
+        left: 3.863%;
+        width: 92.286%;
+        height: 99.916%;
+        max-width: none;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .case-page--foliant .foliant-mobile-frame {
+        position: absolute;
+        z-index: 1;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        pointer-events: none;
+    }
+
+    /* 01 / Task */
+    .case-page--foliant .foliant-task .foliant-copy {
+        height: auto;
+        gap: 16px;
+    }
+
+    .case-page--foliant .foliant-task .foliant-copy .foliant-display {
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -.12px;
+    }
+
+    .case-page--foliant .foliant-journey article {
+        height: 88px;
+        padding: 16px;
+    }
+
+    .case-page--foliant .foliant-journey h3 {
+        margin-top: 8px;
+    }
+
+    .case-page--foliant .foliant-accent-line {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    /* 02 / Process */
+    .case-page--foliant .foliant-process {
+        display: grid;
+        height: auto;
+        grid-template-columns: 1fr;
+        gap: var(--mobile-card-gap);
+    }
+
+    .case-page--foliant .foliant-process article {
+        height: 84px;
+        padding: 16px;
+    }
+
+    .case-page--foliant .foliant-process span {
+        margin-top: 8px;
+    }
+
+    .case-page--foliant .foliant-numbers article {
+        height: 136px;
+        padding: 16px;
+    }
+
+    .case-page--foliant .foliant-numbers strong {
+        font-size: 72px;
+        line-height: 76px;
+    }
+
+    .case-page--foliant .foliant-closing-copy {
+        width: 100%;
+    }
+
+    /* 03 / Analysis */
+    .case-page--foliant .foliant-table {
+        width: 100%;
+        height: 196px;
+        table-layout: fixed;
+    }
+
+    .case-page--foliant .foliant-table th:first-child {
+        width: 100%;
+    }
+
+    .case-page--foliant .foliant-table th:not(:first-child),
+    .case-page--foliant .foliant-table td {
+        display: none;
+    }
+
+    .case-page--foliant .foliant-table th {
+        height: 49px;
+        padding: 8px 12px;
+    }
+
+    .case-page--foliant .foliant-start-modes article {
+        display: flex;
+        height: 92px;
+        padding: 16px;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .case-page--foliant .foliant-start-modes strong {
+        width: 100px;
+    }
+
+    .case-page--foliant .foliant-conclusion,
+    .case-page--foliant .foliant-outline-note {
+        display: flex;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        padding: 16px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .case-page--foliant .foliant-conclusion p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .case-page--foliant .foliant-outline-note {
+        padding: 20px;
+        gap: 16px;
+    }
+
+    /* 04 / Architecture */
+    .case-page--foliant .foliant-copy--short {
+        gap: 12px;
+    }
+
+    .case-page--foliant .foliant-primary-nav article {
+        height: 84px;
+        padding: 16px;
+    }
+
+    .case-page--foliant .foliant-primary-nav span {
+        margin-top: 8px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+    }
+
+    .case-page--foliant .foliant-map {
+        position: static;
+        display: flex;
+        width: 100%;
+        height: 531px;
+        min-height: 531px;
+        padding: 0;
+        flex-direction: column;
+        gap: var(--mobile-card-gap);
+        overflow: hidden;
+        border: 0;
+        border-radius: 12px;
+        box-shadow: inset 0 0 0 2.5px var(--border-color);
+        transform: none;
+    }
+
+    .case-page--foliant .foliant-line,
+    .case-page--foliant .foliant-map .map-node.node-genres,
+    .case-page--foliant .foliant-map .map-node.node-book {
+        display: none;
+    }
+
+    .case-page--foliant .foliant-map .map-node {
+        position: relative;
+        inset: auto;
+        display: flex;
+        width: 100%;
+        height: 103px;
+        padding: 16px;
+        flex: 0 0 103px;
+        justify-content: flex-start;
+        border: 0;
+        background: var(--surface-color);
+        box-shadow: inset 0 0 0 1px var(--border-color);
+        font-size: 24px;
+        line-height: 38px;
+    }
+
+    .case-page--foliant .foliant-map .map-node:not(.node-progress)::after {
+        content: "";
+        position: absolute;
+        bottom: 16px;
+        left: 16px;
+        width: 24px;
+        height: 24px;
+        background: url("../images/case-foliant/chevron-down.svg") center / 24px 24px no-repeat;
+    }
+
+    .case-page--foliant .foliant-map .node-progress {
+        height: 71px;
+        padding: 16px;
+        flex-basis: 71px;
+    }
+
+    .case-page--foliant .foliant-map .map-node>span {
+        white-space: normal;
+    }
+
+    /* 05 / Key decisions */
+    .case-page--foliant .foliant-decision {
+        display: grid;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        padding: 24px 0;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        overflow: visible;
+    }
+
+    .case-page--foliant .foliant-decision h3 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .case-page--foliant .foliant-decision p {
+        margin-top: 16px;
+    }
+
+    .case-page--foliant .foliant-decision-media {
+        display: grid;
+        width: 100%;
+        height: auto;
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .case-page--foliant .foliant-decision-media img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 350 / 758;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* 06 / Metrics */
+    .case-page--foliant .foliant-metric-panels {
+        gap: 16px;
+    }
+
+    .case-page--foliant .foliant-metric-panels>article {
+        width: 100%;
+        height: auto;
+        padding: 28px;
+    }
+
+    .case-page--foliant .foliant-metric-panels .is-dark {
+        padding-top: 28px;
+    }
+
+    .case-page--foliant .foliant-metric-panels .is-dark>b {
+        color: var(--surface-color);
+    }
+
+    .case-page--foliant .foliant-metric-panels h3 {
+        margin-top: 20px;
+    }
+
+    /* 07 / Visual system */
+    .case-page--foliant .foliant-visual .foliant-copy {
+        gap: 12px;
+    }
+
+    .case-page--foliant .foliant-visual-gallery {
+        display: grid;
+        width: 100%;
+        height: auto;
+        grid-template-columns: 1fr;
+        gap: var(--mobile-card-gap);
+        overflow: visible;
+        transform: none;
+    }
+
+    .case-page--foliant .foliant-visual-gallery>div {
+        position: static;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 350 / 196.875;
+        overflow: hidden;
+    }
+
+    .case-page--foliant .foliant-visual-gallery>div img,
+    .case-page--foliant .foliant-visual-gallery>img {
+        position: static;
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    .case-page--foliant .foliant-visual-gallery>img {
+        aspect-ratio: 350 / 523.66;
+    }
+
+    /* 08 / Result */
+    .case-page--foliant .foliant-outcome article {
+        display: flex;
+        height: 96px;
+        padding: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .case-page--foliant .foliant-outcome strong,
+    .case-page--foliant .foliant-outcome b {
+        width: 100%;
+    }
+
+    .case-page--foliant .foliant-reflection {
+        gap: 16px;
+    }
+
+    .case-page--foliant .foliant-reflection>article {
+        width: 100%;
+        height: auto;
+        padding: 28px;
+        gap: 20px;
+    }
+
+    /* Footer */
+    .case-body--foliant .foliant-footer {
+        display: flex;
+        min-height: 528px;
+        flex-direction: column;
+        gap: var(--mobile-layout-gap);
+        background: var(--secondary-color);
+    }
+
+    .case-body--foliant .foliant-footer>*+* {
+        margin-top: 0;
+    }
+
+    .case-body--foliant .foliant-footer .next-project {
+        width: 100%;
+        height: auto;
+        min-height: 204px;
+        font-size: 64px;
+        line-height: 68px;
+        letter-spacing: -1.92px;
+        white-space: normal;
+    }
+
+    .case-body--foliant .foliant-footer .case-footer-bottom {
+        display: flex;
+        width: 100%;
+        height: auto;
+        min-height: 178px;
+        margin-top: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .case-body--foliant .foliant-footer dl {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 36px minmax(0, 1fr);
+        gap: 8px 12px;
+    }
+
+    .case-body--foliant .foliant-footer dd,
+    .case-body--foliant .foliant-footer dd a {
+        min-width: 0;
+        overflow-wrap: anywhere;
     }
 }
