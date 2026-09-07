@@ -95,14 +95,49 @@
 @media (max-width: 767px) {
     .site-header {
         height: 72px;
-        padding: 22px 20px 12px;
+        padding: 16px var(--mobile-gutter);
+        align-items: center;
     }
 
     .site-header h1 {
-        width: auto;
-        font-size: 22px;
-        line-height: 24px;
-        letter-spacing: -0.66px;
+        width: 73px;
+        height: 32px;
+        font-size: 0;
+        line-height: normal;
+        letter-spacing: 0;
+    }
+
+    .site-header .home-link {
+        display: flex;
+        height: 32px;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .site-header .home-link::before {
+        content: "А";
+        display: flex;
+        width: 32px;
+        height: 32px;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 32px;
+        border-radius: 50%;
+        color: var(--surface-color);
+        background: var(--primary-color);
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .site-header .home-link::after {
+        content: "Аня";
+        color: var(--tertiary-color);
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .site-header .home-link span {
+        display: none;
     }
 
     .site-header nav,
@@ -112,14 +147,15 @@
 
     .site-header .menu-toggle {
         display: block;
-        min-height: 32px;
+        width: 40px;
+        height: 40px;
+        min-height: 40px;
         padding: 0;
-        border: 0;
-        color: var(--tertiary-color);
-        background: transparent;
-        font: inherit;
-        font-size: 14px;
-        line-height: 20px;
+        border: 1px solid var(--secondary-color);
+        border-radius: 50%;
+        color: transparent;
+        background: var(--white-color) url("../images/ui/menu.svg") center / 20px 20px no-repeat;
+        font-size: 0;
     }
 
     .site-header nav ul {

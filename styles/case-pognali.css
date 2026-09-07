@@ -750,7 +750,7 @@ a {
     font-weight: 500
 }
 
-@media(max-width:1100px) {
+@media (min-width: 768px) and (max-width: 1100px) {
     :root {
         --gutter: 40px
     }
@@ -1266,4 +1266,919 @@ a {
     font-weight: 700;
     line-height: 24px;
     letter-spacing: -0.08px;
+}
+
+/* Mobile case layout: Figma node 601:2147. */
+@media (max-width: 767px) {
+    body.case-body--pognali {
+        min-width: 0;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.07px;
+    }
+
+    .case-body--pognali .site-header {
+        padding: 16px var(--mobile-gutter) !important;
+    }
+
+    .case-page--pognali,
+    .case-body--pognali .case-footer {
+        width: 100%;
+        max-width: none;
+    }
+
+    .case-page--pognali .case-block,
+    .case-body--pognali .case-footer {
+        display: flex;
+        min-height: 0;
+        padding: var(--mobile-section-padding) var(--mobile-gutter);
+        flex-direction: column;
+        gap: var(--mobile-layout-gap);
+        overflow: hidden;
+    }
+
+    .case-page--pognali .case-block > * + * {
+        margin-top: 0;
+    }
+
+    .case-page--pognali .section-label,
+    .case-body--pognali .case-footer .section-label {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 34px;
+        letter-spacing: -0.84px;
+    }
+
+    .case-page--pognali .display-copy {
+        max-width: none;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 32px;
+        letter-spacing: -0.72px;
+    }
+
+    .case-page--pognali .two-columns,
+    .case-page--pognali .tile-grid,
+    .case-page--pognali .scenario-grid,
+    .case-page--pognali .start-grid,
+    .case-page--pognali .test-layout,
+    .case-page--pognali .visual-gallery {
+        display: flex;
+        min-height: 0;
+        flex-direction: column;
+    }
+
+    .case-page--pognali .two-columns {
+        gap: 12px;
+    }
+
+    .case-page--pognali .section-copy {
+        height: auto;
+        min-height: 0;
+    }
+
+    .case-page--pognali .section-copy > p:last-child {
+        max-width: none;
+    }
+
+    .case-page--pognali .tile-grid,
+    .case-page--pognali .start-grid,
+    .case-page--pognali .scenario-grid {
+        gap: var(--mobile-card-gap);
+    }
+
+    .case-page--pognali .tile,
+    .case-page--pognali .start-grid article {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        padding: 16px;
+    }
+
+    .case-page--pognali .tile h3,
+    .case-page--pognali .nav-grid .tile h3 {
+        margin-top: 8px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.09px;
+    }
+
+    .case-page--pognali .micro-label,
+    .case-page--pognali .accent-note,
+    .case-page--pognali .tile > b,
+    .case-page--pognali .panel > .micro-label {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.07px;
+    }
+
+    /* 01 / Cover */
+    .case-page--pognali .case-cover {
+        min-height: 1940px;
+        padding-top: 32px;
+    }
+
+    .case-page--pognali .case-kicker-row {
+        display: flex;
+        width: 100%;
+        height: 48px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+    .case-page--pognali .case-tags {
+        text-align: left;
+        white-space: normal;
+    }
+
+    .case-page--pognali .case-title {
+        font-size: 56px;
+        font-weight: 700;
+        line-height: 64px;
+        letter-spacing: -0.84px;
+    }
+
+    .case-page--pognali .case-intro {
+        display: flex;
+        min-height: 216px;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 16px;
+    }
+
+    .case-page--pognali .case-lead {
+        width: 100%;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 32px;
+        letter-spacing: -0.72px;
+    }
+
+    .case-page--pognali .case-meta {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .case-page--pognali .case-action {
+        margin-top: 12px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+    .case-page--pognali .cover-gallery {
+        display: flex;
+        width: 100%;
+        height: 1476px;
+        padding: 0;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        background: transparent;
+    }
+
+    .case-page--pognali .phone,
+    .case-page--pognali .phone-frame {
+        width: 180.6px;
+        height: 360px;
+        flex: 0 0 360px;
+    }
+
+    .case-page--pognali .phone > img:first-child {
+        top: 13.92px;
+        left: 13.52px;
+        width: 153.6px;
+        height: 332.6px;
+        border-radius: 22px;
+    }
+
+    /* 02 / Problem */
+    .case-page--pognali > .case-block:nth-of-type(2) {
+        min-height: 838px;
+        background: var(--white-color);
+    }
+
+    .case-page--pognali > .case-block:nth-of-type(2) .section-copy {
+        min-height: 256px;
+        gap: 16px;
+    }
+
+    .case-page--pognali > .case-block:nth-of-type(2) .section-copy > p:first-child {
+        order: 2;
+    }
+
+    .case-page--pognali > .case-block:nth-of-type(2) .section-copy > p:last-child {
+        order: 1;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.08px;
+    }
+
+    .case-page--pognali > .case-block:nth-of-type(2) .tile-grid {
+        height: 372px;
+    }
+
+    .case-page--pognali > .case-block:nth-of-type(2) .tile {
+        height: 84px;
+        flex: 0 0 84px;
+    }
+
+    .case-page--pognali .accent-note {
+        color: var(--tertiary-color);
+        font-weight: 700;
+    }
+
+    /* 03 / Scope */
+    .case-page--pognali > .case-block:nth-of-type(3) {
+        min-height: 738px;
+    }
+
+    .case-page--pognali .scope-columns {
+        display: flex;
+        height: 616px;
+        min-height: 616px;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .case-page--pognali .scope-columns > div {
+        height: 304px;
+    }
+
+    .case-page--pognali .scope-columns > div > .micro-label {
+        margin-top: 16px;
+    }
+
+    .case-page--pognali .plain-list {
+        margin-top: 8px;
+    }
+
+    .case-page--pognali .plain-list li {
+        line-height: 20px;
+    }
+
+    .case-page--pognali .scope-columns > .panel {
+        display: flex;
+        height: 296px;
+        min-height: 296px;
+        padding: 16px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .case-page--pognali .scope-columns > .panel > * {
+        margin-top: 0;
+    }
+
+    .case-page--pognali .scope-columns > .panel h3 {
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.09px;
+    }
+
+    .case-page--pognali .scope-columns > .panel h3:last-child {
+        order: -3;
+    }
+
+    .case-page--pognali .scope-columns > .panel .micro-label {
+        order: -2;
+    }
+
+    .case-page--pognali .scope-columns > .panel h3:first-of-type {
+        order: -1;
+    }
+
+    /* 04 / Research */
+    .case-page--pognali > .case-block:nth-of-type(4) {
+        min-height: 1258px;
+        background: var(--white-color);
+    }
+
+    .case-page--pognali .process-grid {
+        display: flex;
+        height: 468px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .case-page--pognali .process-grid article {
+        width: 100%;
+        height: 84px;
+        padding: 16px;
+        flex: 0 0 84px;
+    }
+
+    .case-page--pognali .process-grid span {
+        margin-top: 8px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .case-page--pognali .stat-grid {
+        height: 452px;
+    }
+
+    .case-page--pognali .stat-grid .tile {
+        height: 104px;
+        padding: 16px;
+        flex: 0 0 104px;
+    }
+
+    .case-page--pognali .stat-grid .tile strong {
+        font-size: 40px;
+        line-height: 44px;
+        letter-spacing: -1.2px;
+    }
+
+    .case-page--pognali .stat-grid .tile b {
+        margin-top: 8px;
+    }
+
+    /* 05 / Recruitment */
+    .case-page--pognali > .case-block:nth-of-type(5) {
+        min-height: 906px;
+    }
+
+    .case-page--pognali > .case-block:nth-of-type(5) .section-copy {
+        min-height: 156px;
+    }
+
+    .case-page--pognali > .case-block:nth-of-type(5) .tile-grid {
+        height: 420px;
+    }
+
+    .case-page--pognali .criteria-grid .tile {
+        height: 96px;
+        flex: 0 0 96px;
+    }
+
+    .case-page--pognali .criteria-grid .tile strong {
+        font-size: 32px;
+        line-height: 36px;
+        letter-spacing: -0.96px;
+    }
+
+    .case-page--pognali .criteria-grid .tile b {
+        margin-top: 8px;
+    }
+
+    .case-page--pognali .outline-note,
+    .case-page--pognali .conclusion {
+        display: flex;
+        min-height: 0;
+        padding: 16px;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .case-page--pognali > .case-block:nth-of-type(5) .outline-note {
+        height: 160px;
+    }
+
+    /* 06 / Findings */
+    .case-page--pognali > .case-block:nth-of-type(6) {
+        min-height: 1342px;
+        background: var(--white-color);
+    }
+
+    .case-page--pognali .metric-grid {
+        height: 492px;
+    }
+
+    .case-page--pognali .metric-grid .tile {
+        height: 104px;
+        padding: 16px;
+        flex: 0 0 104px;
+    }
+
+    .case-page--pognali .metric-grid .tile:nth-child(2),
+    .case-page--pognali .metric-grid .tile:nth-child(3) {
+        height: 124px;
+        flex-basis: 124px;
+    }
+
+    .case-page--pognali .metric-grid .tile > strong {
+        font-size: 40px;
+        line-height: 44px;
+        letter-spacing: -1.2px;
+    }
+
+    .case-page--pognali .metric-grid .tile > p {
+        margin-top: 8px;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.07px;
+    }
+
+    .case-page--pognali .start-grid {
+        height: 276px;
+    }
+
+    .case-page--pognali .start-grid article {
+        display: flex;
+        height: 84px;
+        padding: 16px;
+        flex: 0 0 84px;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .case-page--pognali .start-grid strong {
+        width: auto;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .case-page--pognali .conclusion {
+        height: 160px;
+        flex: 0 0 160px;
+        gap: 12px;
+    }
+
+    .case-page--pognali .conclusion p {
+        /* Noto Sans is wider than the Figma reference face at this size. */
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.08px;
+    }
+
+    .case-page--pognali > .case-block:nth-of-type(6) .outline-note {
+        height: 100px;
+    }
+
+    /* 07 / Two scenarios */
+    .case-page--pognali > .case-block:nth-of-type(7) {
+        min-height: 3064.2px;
+    }
+
+    .case-page--pognali .scenario-card {
+        display: flex;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        padding: 16px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .case-page--pognali .scenario-card:first-child {
+        height: 1405px;
+    }
+
+    .case-page--pognali .scenario-card:last-child {
+        height: 1433.2px;
+    }
+
+    .case-page--pognali .scenario-card > * {
+        margin-top: 0;
+    }
+
+    .case-page--pognali .scenario-card h3 {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.09px;
+    }
+
+    .case-page--pognali .scenario-card > p {
+        min-height: 80px;
+    }
+
+    .case-page--pognali .scenario-card > strong {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .case-page--pognali .screen-row {
+        display: flex;
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .case-page--pognali .screen-row img {
+        width: 180.6px;
+        height: auto;
+        flex: 0 0 auto;
+        border-radius: 0;
+        object-fit: contain;
+    }
+
+    /* 08 / Architecture */
+    .case-page--pognali > .case-block:nth-of-type(8) {
+        min-height: 1142px;
+        background: var(--white-color);
+    }
+
+    .case-page--pognali > .case-block:nth-of-type(8) .section-copy {
+        min-height: 136px;
+    }
+
+    .case-page--pognali .nav-grid {
+        height: 372px;
+    }
+
+    .case-page--pognali .nav-grid .tile {
+        height: 84px;
+        padding: 16px;
+        flex: 0 0 84px;
+    }
+
+    .case-page--pognali .site-map {
+        display: flex;
+        width: 100%;
+        height: 464px;
+        padding: 0;
+        flex-direction: column;
+        gap: 12px;
+        background: none;
+    }
+
+    .case-page--pognali .site-map .map-root,
+    .case-page--pognali .site-map .map-row span {
+        position: static;
+        display: flex;
+        width: 100%;
+        height: 56px;
+        min-height: 56px;
+        margin: 0;
+        padding: 16px;
+        align-items: center;
+        justify-content: flex-start;
+        border: var(--border-size) solid var(--primary-color);
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        transform: none;
+    }
+
+    .case-page--pognali .site-map .map-row {
+        display: contents;
+    }
+
+    .case-page--pognali .site-map .map-row:not(.map-row--bottom) span:nth-child(n),
+    .case-page--pognali .site-map .map-row--bottom span:nth-child(n) {
+        position: static;
+        inset: auto;
+        width: 100%;
+        height: 56px;
+    }
+
+    /* 09 / Product decisions */
+    .case-page--pognali > .case-block:nth-of-type(9) {
+        min-height: 3042.4px;
+    }
+
+    .case-page--pognali .decision {
+        display: flex;
+        min-height: 0;
+        padding: 0;
+        flex-direction: column;
+        gap: 12px;
+        border: 0;
+    }
+
+    .case-page--pognali .decision:first-of-type {
+        height: 930.1px;
+    }
+
+    .case-page--pognali .decision:not(:first-of-type) {
+        height: 954.1px;
+    }
+
+    .case-page--pognali .decision > div:first-child {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .case-page--pognali .decision h3 {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.1px;
+    }
+
+    .case-page--pognali .decision p {
+        margin-top: 0;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.07px;
+    }
+
+    .case-page--pognali .decision > div:first-child > p:last-child {
+        font-weight: 700;
+    }
+
+    .case-page--pognali .decision-media {
+        display: flex;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .case-page--pognali .decision-media img {
+        width: 180.6px;
+        height: auto;
+        flex: 0 0 auto;
+        border-radius: 0;
+        object-fit: contain;
+    }
+
+    /* 10 / MLP and metrics */
+    .case-page--pognali > .case-block:nth-of-type(10) {
+        min-height: 810px;
+    }
+
+    .case-page--pognali .mlp-grid {
+        height: 600px;
+        gap: 16px;
+    }
+
+    .case-page--pognali .mlp-grid > .panel {
+        display: flex;
+        width: 100%;
+        min-height: 0;
+        padding: 16px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .case-page--pognali .mlp-grid > .panel > * {
+        margin-top: 0;
+    }
+
+    .case-page--pognali .mlp-grid > .panel-light {
+        height: 260px;
+    }
+
+    .case-page--pognali .mlp-grid > .panel-dark {
+        height: 324px;
+        padding: 16px;
+    }
+
+    .case-page--pognali .mlp-grid > .panel-dark > .micro-label {
+        display: block;
+    }
+
+    .case-page--pognali .mlp-grid > .panel-light > .feature-list {
+        margin: 0;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.08px;
+    }
+
+    .case-page--pognali .mlp-grid > .panel-light > p:last-child {
+        margin-top: 0;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.07px;
+    }
+
+    .case-page--pognali .mlp-grid .panel h3 {
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.72px;
+    }
+
+    .case-page--pognali .mlp-grid > .panel-dark .metrics-list {
+        display: flex;
+        margin-top: 0;
+        flex-direction: column;
+        gap: 0;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .case-page--pognali .mlp-grid > .panel-dark small {
+        margin-top: 0;
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    /* 11 / Prototype test */
+    .case-page--pognali > .case-block:nth-of-type(11) {
+        min-height: 1295.1px;
+        background: var(--white-color);
+    }
+
+    .case-page--pognali > .case-block:nth-of-type(11) .section-copy {
+        min-height: 136px;
+    }
+
+    .case-page--pognali .test-layout {
+        gap: 24px;
+    }
+
+    .case-page--pognali .test-layout > div {
+        display: contents;
+    }
+
+    .case-page--pognali .test-findings {
+        display: flex;
+        height: 360px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .case-page--pognali .test-findings .tile {
+        height: 112px;
+        padding: 16px;
+        flex: 0 0 112px;
+    }
+
+    .case-page--pognali .test-findings .tile h3,
+    .case-page--pognali .test-findings .tile p {
+        margin-top: 8px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .case-page--pognali .test-findings .tile p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .case-page--pognali .prepared {
+        display: flex;
+        width: 100%;
+        height: 180px;
+        margin-top: 0;
+        padding: 16px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .case-page--pognali .prepared > * {
+        margin-top: 0;
+    }
+
+    .case-page--pognali .prepared > .micro-label {
+        display: block;
+    }
+
+    .case-page--pognali .prepared h3 {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.08px;
+    }
+
+    .case-page--pognali .prepared small {
+        line-height: 16px;
+    }
+
+    .case-page--pognali .test-phone {
+        width: 180.6px;
+        height: auto;
+        border-radius: 0;
+        object-fit: contain;
+    }
+
+    /* 12 / Visual system */
+    .case-page--pognali > .case-block:nth-of-type(12) {
+        min-height: 1212.5px;
+    }
+
+    .case-page--pognali > .case-block:nth-of-type(12) .section-copy {
+        min-height: 176px;
+    }
+
+    .case-page--pognali .visual-gallery {
+        width: 100%;
+        height: auto;
+        gap: 12px;
+    }
+
+    .case-page--pognali .visual-gallery img {
+        width: 100%;
+        height: auto;
+        flex: 0 0 auto;
+        object-fit: contain;
+    }
+
+    .case-page--pognali > .case-block:nth-of-type(12) .outline-note {
+        height: 100px;
+    }
+
+    /* 13 / Result and reflection */
+    .case-page--pognali > .case-block:nth-of-type(13) {
+        min-height: 1164px;
+        background: var(--surface-color);
+    }
+
+    .case-page--pognali .outcome-grid {
+        height: 388px;
+    }
+
+    .case-page--pognali .outcome-grid .tile {
+        display: flex;
+        height: 88px;
+        padding: 16px;
+        flex: 0 0 88px;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .case-page--pognali .outcome-grid strong {
+        width: auto;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: -0.12px;
+    }
+
+    .case-page--pognali > .case-block:nth-of-type(13) > .scenario-grid {
+        height: 508px;
+        gap: 16px;
+    }
+
+    .case-page--pognali > .case-block:nth-of-type(13) .scenario-grid > .panel {
+        display: flex;
+        width: 100%;
+        min-height: 0;
+        padding: 16px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .case-page--pognali > .case-block:nth-of-type(13) .scenario-grid > .panel:first-child {
+        height: 300px;
+    }
+
+    .case-page--pognali > .case-block:nth-of-type(13) .scenario-grid > .panel:last-child {
+        height: 192px;
+    }
+
+    .case-page--pognali > .case-block:nth-of-type(13) .scenario-grid > .panel > * {
+        margin-top: 0;
+    }
+
+    .case-page--pognali > .case-block:nth-of-type(13) .scenario-grid > .panel h3 {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.08px;
+    }
+
+    /* 14 / Footer */
+    .case-body--pognali .case-footer {
+        min-height: 337px;
+        background: var(--secondary-color);
+    }
+
+    .case-body--pognali .next-project {
+        width: 100%;
+        height: 44px;
+        margin-top: 0;
+        font-size: 40px;
+        line-height: 44px;
+        letter-spacing: -1.2px;
+    }
+
+    .case-body--pognali .case-footer-bottom {
+        display: flex;
+        height: 147px;
+        align-items: stretch;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .case-body--pognali .case-footer dl {
+        display: flex;
+        width: 100%;
+        margin: 0;
+        flex-direction: column;
+        gap: 8px;
+        line-height: 20px;
+    }
+
+    .case-body--pognali .case-footer dt:nth-of-type(2) {
+        order: 2;
+    }
+
+    .case-body--pognali .case-footer dd:nth-of-type(1) {
+        margin-top: 4px;
+        order: 3;
+    }
+
+    .case-body--pognali .case-footer dd:nth-of-type(2) {
+        order: 4;
+    }
+
+    .case-body--pognali .case-footer-bottom > p {
+        align-self: flex-end;
+        font-size: 24px;
+        line-height: 23px;
+        letter-spacing: -0.72px;
+    }
 }
