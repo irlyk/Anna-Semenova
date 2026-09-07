@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Фолиант — кейс Анны Семеновой</title>
-    <link rel="stylesheet" href="case-pognali.css">
-    <link rel="stylesheet" href="site-header.css">
+    <link rel="stylesheet" href="case-pognali.css?v=3">
+    <link rel="stylesheet" href="case-foliant.css?v=1">
+    <link rel="stylesheet" href="site-header.css?v=1">
 </head>
 <body>
     <header class="site-header">
@@ -21,21 +22,95 @@
         </nav>
     </header>
 
-    <main class="case-page case-page--legacy">
-        <img src="./images/case-foliant/01-cover.png" alt="Обложка кейса «Фолиант»">
-        <img src="./images/case-foliant/02-task.png" alt="Задача">
-        <img src="./images/case-foliant/03-process.png" alt="Процесс проектирования">
-        <img src="./images/case-foliant/04-insights.png" alt="Выводы анализа">
-        <img src="./images/case-foliant/05-architecture.png" alt="Архитектура">
-        <img src="./images/case-foliant/06-decisions.png" alt="Ключевые решения">
-        <img src="./images/case-foliant/07-metrics.png" alt="Метрики продукта">
-        <img src="./images/case-foliant/08-visual-system.png" alt="Визуальная система">
-        <img src="./images/case-foliant/09-result.png" alt="Результат и рефлексия">
-        <section class="case-section">
-            <img src="./images/case-foliant/10-footer.png" alt="Вернуться на главную">
-            <a class="case-next-link" href="index.html" aria-label="Вернуться на главную страницу"></a>
+    <main class="case-page case-page--foliant">
+        <section class="foliant-section foliant-cover">
+            <div class="foliant-cover-device"><img src="images/case-foliant/foliant-cover-device.png" alt="Приложение «Фолиант» на трёх устройствах"></div>
+            <div class="foliant-kicker-row"><p>КУРСОВОЙ ПРОЕКТ / 2024</p><p>PRODUCT DESIGN&nbsp;&nbsp;&nbsp;UI SYSTEM&nbsp;&nbsp;&nbsp;iOS</p></div>
+            <h2 class="foliant-title">ФОЛИАНТ</h2>
+            <div class="foliant-intro"><p class="foliant-display">Тёплое приложение для поиска, чтения и хранения книг</p><div class="foliant-meta"><p>Соло-проект<br>1 месяц</p><span>ПОСМОТРЕТЬ ПРОТОТИП <b>✶</b></span></div></div>
+        </section>
+
+        <section class="foliant-section foliant-task">
+            <h2 class="section-label">01 / ЗАДАЧА</h2>
+            <div class="foliant-copy"><p class="foliant-display">Сделать цифровое чтение<br>таким же тёплым, как домашняя библиотека</p><p>Курсовая по дизайну мобильных приложений. Я проектировала iOS-продукт с опорой на Human Interface Guidelines и мобильное юзабилити.</p></div>
+            <div class="foliant-four foliant-journey"><article><b>01</b><h3>ПОИСК</h3></article><article><b>02</b><h3>БИБЛИОТЕКА</h3></article><article><b>03</b><h3>ЧТЕНИЕ</h3></article><article class="is-dark"><b>04</b><h3>СВОИ ФАЙЛЫ</h3></article></div>
+            <p class="foliant-accent-line">ПОЛНЫЙ ЦИКЛ ПРОЕКТИРОВАНИЯ — ОТ ЛОГИКИ ПРОДУКТА ДО ВИЗУАЛЬНОЙ СИСТЕМЫ</p>
+        </section>
+
+        <section class="foliant-section foliant-process-section">
+            <h2 class="section-label">02 / ПРОЦЕСС</h2>
+            <p class="foliant-display foliant-wide">От структуры продукта<br>к визуальной концепции</p>
+            <div class="foliant-process"><article><b>01</b><span>КОНКУРЕНТЫ</span></article><article><b>02</b><span>СТРУКТУРА</span></article><article class="is-accent"><b>03</b><span>LOW-FI</span></article><article><b>04</b><span>КОРИДОРКИ</span></article><article><b>05</b><span>UI-СИСТЕМА</span></article></div>
+            <div class="foliant-four foliant-numbers"><article><strong>4</strong><b>КОНКУРЕНТА</b></article><article><strong>1</strong><b>ОСНОВНОЙ ФЛОУ</b></article><article><strong>8</strong><b>LOW-FI ЭКРАНОВ</b></article><article><strong>1</strong><b>МЕСЯЦ</b></article></div>
+            <p class="foliant-closing-copy">Каждый этап снижал неопределённость: анализ сформировал требования, структура связала сценарии, а low-fi позволил проверить переходы до работы с визуалом.</p>
+        </section>
+
+        <section class="foliant-section foliant-insights">
+            <h2 class="section-label">03 / ВЫВОДЫ АНАЛИЗА</h2>
+            <p class="foliant-display foliant-wide">Главная должна возвращать<br>к чтению, а не в бесконечный каталог</p>
+            <table class="foliant-table"><thead><tr><th>ФУНКЦИЯ</th><th>ЯНДЕКС</th><th>ЛИТРЕС</th><th>APPLE</th><th>ФОЛИАНТ</th></tr></thead><tbody><tr><th>Свои файлы</th><td class="yes">+</td><td>—</td><td class="yes">+</td><td class="yes own">+</td></tr><tr><th>Поиск по жанрам</th><td class="yes">+</td><td class="yes">+</td><td>—</td><td class="yes own">+</td></tr><tr><th>Библиотека открывается первой</th><td>—</td><td>—</td><td class="yes">+</td><td class="yes own">+</td></tr></tbody></table>
+            <div class="foliant-three foliant-start-modes"><article><strong>25%</strong><span>свои файлы</span></article><article><strong>25%</strong><span>поиск по жанрам</span></article><article><strong>25%</strong><span>сортировка книг</span></article></div>
+            <div class="foliant-conclusion"><b>ВЫВОД</b><p>В основу продукта вошли загрузка собственных файлов, библиотека на главной, поиск по жанрам и параметрам и минимальный визуальный шум.</p></div>
+            <div class="foliant-outline-note"><b>AI</b><p>Использовала для создания части графики и поиска вариантов визуальных образов</p></div>
+        </section>
+
+        <section class="foliant-section foliant-architecture-section">
+            <h2 class="section-label">04 / АРХИТЕКТУРА</h2>
+            <div class="foliant-copy foliant-copy--short"><p class="foliant-display">Четыре направления,<br>собранные в один путь</p><p>Структура связывает поиск книг, подробную информацию, чтение и управление личной библиотекой.</p></div>
+            <div class="foliant-four foliant-primary-nav"><article><b>01</b><span>БИБЛИОТЕКА</span></article><article><b>02</b><span>ПОИСК</span></article><article><b>03</b><span>КНИЖНЫЙ</span></article><article><b>04</b><span>ЧТЕНИЕ</span></article></div>
+            <div class="foliant-map" aria-label="Архитектура приложения «Фолиант»">
+                <span class="foliant-line line-58-59"><img src="images/case-foliant/line-58-59.svg" alt=""></span>
+                <span class="foliant-line line-58-54"><img src="images/case-foliant/line-58-54.svg" alt=""></span>
+                <span class="foliant-line line-58-60"><img src="images/case-foliant/line-58-60.svg" alt=""></span>
+                <span class="foliant-line line-59-56"><img src="images/case-foliant/line-59-56.svg" alt=""></span>
+                <span class="foliant-line line-59-54"><img src="images/case-foliant/line-59-54.svg" alt=""></span>
+                <span class="foliant-line line-59-60"><img src="images/case-foliant/line-59-60.svg" alt=""></span>
+                <span class="foliant-line line-54-60"><img src="images/case-foliant/line-54-60.svg" alt=""></span>
+                <span class="foliant-line line-57-54"><img src="images/case-foliant/line-57-54.svg" alt=""></span>
+                <span class="foliant-line line-56-60"><img src="images/case-foliant/line-56-60.svg" alt=""></span>
+                <span class="foliant-line line-55-57"><img src="images/case-foliant/line-55-57.svg" alt=""></span>
+                <span class="foliant-line line-55-58"><img src="images/case-foliant/line-55-58.svg" alt=""></span>
+                <span class="foliant-line line-55-59"><img src="images/case-foliant/line-55-59.svg" alt=""></span>
+                <span class="foliant-line line-55-56"><img src="images/case-foliant/line-55-56.svg" alt=""></span>
+                <div class="map-node node-shelves"><span>Мои полки</span></div>
+                <div class="map-node node-search"><span>Поиск<br>книги</span></div>
+                <div class="map-node node-profile"><span>Книжный профиль</span></div>
+                <div class="map-node node-reading"><span>Режим<br>чтения</span></div>
+                <div class="map-node node-progress"><span>Прогресс<br>и статистика</span></div>
+                <div class="map-node node-genres"><span>Жанры и параметры</span></div>
+                <div class="map-node node-book"><span>Страница книги</span></div>
+            </div>
+        </section>
+
+        <section class="foliant-section foliant-decisions">
+            <h2 class="section-label">05 / КЛЮЧЕВЫЕ РЕШЕНИЯ</h2>
+            <article class="foliant-decision"><div><h3>01 / БИБЛИОТЕКА – ПЕРВАЯ</h3><p class="foliant-data">ДАННЫЕ: людям важно быстро возвращаться к начатым книгам.</p><p><b>РЕШЕНИЕ:</b> личные полки, прогресс и цитата дня открываются сразу.</p></div><div class="foliant-decision-media"><img src="images/case-foliant/decision-library.png" alt="Личная библиотека"><img src="images/case-foliant/decision-search.png" alt="Поиск книг"></div></article>
+            <article class="foliant-decision"><div><h3>02 / ПОИСК ОТ ЖАНРА К КНИГЕ</h3><p class="foliant-data">ДАННЫЕ: одного общего поискового поля недостаточно для исследования каталога.</p><p><b>РЕШЕНИЕ:</b> жанры, параметры и результаты поддерживают разные способы выбора.</p></div><div class="foliant-decision-media"><img src="images/case-foliant/decision-search-keyboard.png" alt="Поиск с клавиатурой"><img src="images/case-foliant/decision-book.png" alt="Страница книги"></div></article>
+            <article class="foliant-decision"><div><h3>03 / ЦИФРОВАЯ КНИГА КАК ОБЪЕКТ</h3><p class="foliant-data">ДАННЫЕ: визуальный образ должен поддерживать атмосферу чтения.</p><p><b>РЕШЕНИЕ:</b> обложки, полки и пропорции компонентов напоминают физические книги.</p></div><div class="foliant-decision-media"><img src="images/case-foliant/decision-library.png" alt="Личная библиотека"><img src="images/case-foliant/decision-search.png" alt="Поиск книг"></div></article>
+        </section>
+
+        <section class="foliant-section foliant-metrics">
+            <h2 class="section-label">06 / МЕТРИКИ</h2>
+            <p class="foliant-display foliant-wide">Проверять не красоту интерфейса,<br>а возвращение к чтению</p>
+            <div class="foliant-two foliant-metric-panels"><article class="is-light"><b>ПЕРВАЯ ВЕРСИЯ</b><p class="foliant-feature-list">Поиск и жанры<br>Личная библиотека<br>Страница книги<br>Чтение и аудио<br>Загрузка своих файлов</p><p>Расширение каталога и социальные механики – следующие итерации.</p></article><article class="is-dark"><h3>Open Book</h3><p>Переход от поиска или библиотеки к чтению.</p><p class="foliant-metric-list">SEARCH → OPEN<br>READING TIME<br>PROGRESS<br>RETENTION 30<br>BOOKS FINISHED<br>NPS И ОТЗЫВЫ</p><small>Это план измерения учебной концепции, а не фактические результаты.</small></article></div>
+        </section>
+
+        <section class="foliant-section foliant-visual">
+            <h2 class="section-label">07 / ВИЗУАЛЬНАЯ СИСТЕМА</h2>
+            <div class="foliant-copy"><p class="foliant-display">Уют, собранный<br>через метод ассоциаций</p><p>Книжные полки, дерево, бумага, ковёр, свечи и закладки стали основой тёплой палитры, графики и компонентов. UI-kit собран самостоятельно после разбора Human Interface Guidelines.</p></div>
+            <div class="foliant-visual-gallery"><div><img src="images/case-foliant/visual-moodboard.png" alt="Moodboard визуальной системы"></div><img src="images/case-foliant/visual-ui-kit.png" alt="Компоненты UI-kit"></div>
+            <div class="foliant-outline-note"><b>AI</b><p>Часть графики создана совместно с ИИ и приведена к единому визуальному принципу</p></div>
+        </section>
+
+        <section class="foliant-section foliant-result">
+            <h2 class="section-label">08 / РЕЗУЛЬТАТ И РЕФЛЕКСИЯ</h2>
+            <p class="foliant-display foliant-wide">Первый масштабный UI-проект<br>и первая цельная система</p>
+            <div class="foliant-four foliant-outcome"><article><strong>4</strong><b>КОНКУРЕНТА</b></article><article><strong>8</strong><b>LOW-FI ЭКРАНОВ</b></article><article><strong>1</strong><b>UI KIT</b></article><article><strong>5</strong><b>ОЦЕНКА</b></article></div>
+            <div class="foliant-two foliant-reflection"><article class="is-accent"><b>ЧТО ПОЛУЧИЛОСЬ</b><p class="foliant-medium">Собрала продукт от анализа и архитектуры до визуальной концепции, компонентов и интерактивного прототипа. Проект отметили за визуал и проработку экранов.</p><p>Главный результат — научилась не брать визуальные решения из воздуха: каждый образ, цвет и компонент связан с общей идеей продукта.</p></article><article class="is-dark"><b>ЧТО УЛУЧШИЛА БЫ</b><p class="foliant-medium">01 / Успокоила палитру<br>02 / Точнее настроила типографику<br>03 / Добавила больше сценариев<br>04 / Проработала эффекты</p><p>Проект защищён перед преподавателями на 5.</p></article></div>
         </section>
     </main>
+
+    <footer class="case-footer foliant-footer"><p class="section-label">ВСЕ ПРОЕКТЫ</p><a class="next-project" href="index.html">Вернуться на главную →</a><div class="case-footer-bottom"><dl><dt>TG</dt><dd><a href="https://t.me/yellow_favor">@YELLOW_FAVOR</a></dd><dt>EMAIL</dt><dd><a href="mailto:an.na.product.design@gmail.com">AN.NA.PRODUCT.DESIGN@GMAIL.COM</a></dd></dl><p>2026</p></div></footer>
     <script src="site-header.js" defer></script>
 </body>
 </html>
