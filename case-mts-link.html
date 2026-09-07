@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>МТС Линк — кейс Анны Семеновой</title>
-    <link rel="stylesheet" href="case-pognali.css">
-    <link rel="stylesheet" href="site-header.css">
+    <link rel="stylesheet" href="case-pognali.css?v=2">
+    <link rel="stylesheet" href="case-mts-link.css?v=1">
+    <link rel="stylesheet" href="site-header.css?v=1">
 </head>
 <body>
     <header class="site-header">
-        <h1><a class="home-link" href="index.html">ПРИВЕТ, НА СВЯЗИ <span class="text-accent">АНЯ</span></a></h1>
+        <h1><a class="home-link" href="index.html">ПРИВЕТ, НА СВЯЗИ <span>АНЯ</span></a></h1>
         <nav aria-label="Навигация по портфолио">
             <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mts-navigation">МЕНЮ</button>
             <ul id="mts-navigation">
@@ -21,23 +22,38 @@
         </nav>
     </header>
 
-    <main class="case-page">
-        <img src="./images/case-mts-link/01-cover.png" alt="Обложка кейса «МТС Линк»">
-        <img src="./images/case-mts-link/02-project.png" alt="Контекст проекта">
-        <img src="./images/case-mts-link/03-brief.png" alt="Бриф заказчика">
-        <img src="./images/case-mts-link/04-research.png" alt="Исследование">
-        <img src="./images/case-mts-link/05-insights.png" alt="Выводы интервью">
-        <img src="./images/case-mts-link/06-concept.png" alt="Концепция продукта">
-        <img src="./images/case-mts-link/07-rooms.png" alt="Переговорные комнаты">
-        <img src="./images/case-mts-link/08-screen.png" alt="Экраны сервиса">
-        <img src="./images/case-mts-link/09-team-result.png" alt="Результат командной работы">
-        <img src="./images/case-mts-link/10-testing.png" alt="Тестирование">
-        <img src="./images/case-mts-link/11-result.png" alt="Результат и рефлексия">
-        <section class="case-section">
-            <img src="./images/case-mts-link/12-footer.png" alt="Следующий проект — Фолиант">
-            <a class="case-next-link" href="case-foliant.html" aria-label="Открыть следующий проект — Фолиант"></a>
+    <main class="case-page case-page--mts">
+        <section class="mts-section mts-cover">
+            <div class="mts-kicker-row"><p>УЧЕБНАЯ ПРОЕКТНАЯ ПРАКТИКА / 2024</p><p>TEAMWORK&nbsp;&nbsp;&nbsp;UX RESEARCH&nbsp;&nbsp;&nbsp;B2B</p></div>
+            <h2 class="mts-title">МТС ЛИНК</h2>
+            <div class="mts-intro"><p class="mts-display">Исследование и концепция сервиса «Встречи» для бизнес-коммуникаций</p><div class="mts-meta"><p>Команда: 3 дизайнера<br>Моя роль: UX Research<br>3 месяца / 3–4 недели активно</p><span>ПОСМОТРЕТЬ ПРОТОТИП <b>✶</b></span></div></div>
+            <div class="mts-cover-media"><img src="images/case-mts-link/mts-cover-01.png" alt="Главный экран МТС Линк"><img src="images/case-mts-link/mts-cover-02.png" alt="Экран встречи МТС Линк"></div>
         </section>
+
+        <section class="mts-section"><h2 class="section-label">01 / ПРОЕКТ</h2><div class="mts-two mts-project"><div><p class="mts-display">Реальный кейс от команды дизайнеров МТС Линк</p><p>Представители продукта выступали заказчиками: команда провела брифинг и защищала решение непосредственно перед ними.</p><b class="mts-eyebrow">ФОРМАТ</b><p class="mts-medium">Учебная проектная практика<br>Концепция, без запуска в прод</p></div><article class="mts-panel"><b class="mts-eyebrow">МОЙ ВКЛАД</b><p class="mts-medium">Конкурентный анализ<br>Гипотезы и исследования<br>Интервью и опрос<br>Синтез результатов<br>Участие в архитектуре и создании персон<br>Usability-тестирование</p><small>Финальный hi-fi прототип собирал другой участник команды.</small></article></div></section>
+
+        <section class="mts-section mts-brief"><h2 class="section-label">02 / БРИФ ЗАКАЗЧИКА</h2><p class="mts-display mts-wide">Встреча заканчивается.<br>Работа с её результатами — нет.</p><div class="mts-two mts-problems"><article class="mts-card mts-accent"><b>01</b><h3>Сложно вести встречу и фиксировать договорённости</h3><p>Менеджер одновременно модерирует разговор, слушает участников и пытается не потерять задачи.</p></article><article class="mts-card mts-dark"><b>02</b><h3>Долго искать важное после встречи</h3><p>Записи, заметки и договорённости существуют раздельно, а вернуться в контекст нужно быстро.</p></article></div><p class="mts-task">ЗАДАЧА / Спроектировать сервис «Встречи», который помогает подготовиться к созвону, фиксировать результаты и быстро возвращаться к контексту.</p></section>
+
+        <section class="mts-section mts-research"><h2 class="section-label">03 / ИССЛЕДОВАНИЕ</h2><p class="mts-display mts-wide">Проверяли не интерфейс,<br>а реальный процесс работы со встречами</p><div class="mts-process"><article><b>01</b><span>КОНКУРЕНТЫ</span></article><article><b>02</b><span>ГИПОТЕЗЫ</span></article><article class="active"><b>03</b><span>5 ИНТЕРВЬЮ</span></article><article><b>04</b><span>ОПРОС / 10</span></article><article><b>05</b><span>СИНТЕЗ</span></article></div><div class="mts-note mts-note-filled"><b>ОГРАНИЧЕНИЕ</b><p>Опрос из 10 участников использовали как дополнительную проверку качественных наблюдений, а не как репрезентативное исследование.</p></div>
+            <div class="mts-detail"><header><b>ПОДГОТОВКА ИССЛЕДОВАНИЯ</b><h3>До интервью я определила выборку, гипотезы и структуру разговора</h3></header><div class="mts-detail-grid"><article><h4><b>01</b>Кого искали</h4><p>Возраст — 25–50 лет.<br><br>Роли — от рядовых сотрудников до руководителей с командами 30+ человек.<br><br>Отрасли — телеком, IT, финтех и логистика.</p><small>Так учитывала различия между участием во встречах, их организацией и управлением командой.</small></article><article><h4><b>02</b>Что проверяли</h4><p>Как фиксируют договорённости и заметки.<br><br>Что делают после пропущенной встречи.<br><br>Каких инструментов не хватает до, во время и после созвона.</p><small>Важная корректировка: проблема оказалась не в проведении встреч, а в работе с их результатами.</small></article><article><h4><b>03</b>Как построили интервью</h4><p>Контекст рабочего дня → планирование → проведение встречи → фиксация решений → постанализ.</p><small>Для руководителей и модераторов подготовили отдельные уточнения. Разговор занимал около 30 минут и записывался с согласия респондента.</small></article></div></div>
+        </section>
+
+        <section class="mts-section"><h2 class="section-label">04 / ВЫВОДЫ ИНТЕРВЬЮ</h2><p class="mts-display mts-wide">Один сервис должен поддерживать три разных типа коммуникации</p><div class="mts-three meeting-types"><article><b>01</b><h3>ПОЛНОЦЕННАЯ ВСТРЕЧА</h3><p>План, протокол, заметки и зафиксированные договорённости.</p></article><article class="mts-accent"><b>02</b><h3>РЕГУЛЯРНАЯ ВСТРЕЧА</h3><p>Дейли, ретро и другие повторяющиеся встречи с быстрым входом.</p></article><article><b>03</b><h3>БЫСТРЫЙ СОЗВОН</h3><p>Решение небольшой задачи и совместная работа без сложной настройки.</p></article></div><div class="mts-two segments"><article><h3>РУКОВОДИТЕЛИ БОЛЬШИХ КОМАНД</h3><p>5–6 встреч в день. Нужны план, резюме, договорённости и быстрый возврат в контекст.</p></article><article><h3>ТИМЛИДЫ РАСПРЕДЕЛЁННЫХ КОМАНД</h3><p>До 3 встреч в день. Важны повторяющиеся комнаты, запись и объяснение информации коллегам.</p></article></div></section>
+
+        <section class="mts-section"><h2 class="section-label">05 / КОНЦЕПЦИЯ</h2><div class="mts-two mts-copy-row"><p class="mts-display">«Встречи» объединяют весь рабочий цикл созвона</p><p>Команда связала подготовку, проведение и последующую работу с материалами в одной системе — вместо набора разрозненных инструментов.</p></div><div class="mts-three lifecycle"><article><b>01</b><h3>ДО</h3><p>планирование и повестка</p></article><article class="mts-dark"><b>02</b><h3>ВО ВРЕМЯ</h3><p>заметки, задачи, транскрибация</p></article><article><b>03</b><h3>ПОСЛЕ</h3><p>запись, резюме, инсайты</p></article></div><div class="mts-detail architecture"><header><b>АРХИТЕКТУРА КОНЦЕПЦИИ</b><h3>Сервис сопровождает встречу на всём её жизненном цикле</h3></header><div class="architecture-stages"><article><b>01</b><h4>Планирование</h4><p>Повестка, участники и материалы</p></article><article><b>02</b><h4>Проведение</h4><p>Созвон и совместная работа</p></article><article><b>03</b><h4>Фиксация</h4><p>Заметки, задачи и договорённости</p></article><article><b>04</b><h4>Постанализ</h4><p>Записи, резюме и поиск</p></article></div><div class="architecture-hub"><b>ЕДИНАЯ ВСТРЕЧА</b><p>Все материалы и результаты доступны внутри одного объекта</p></div></div></section>
+
+        <section class="mts-section mts-rooms"><h2 class="section-label">06 / МОЯ ЗОНА ПРОЕКТИРОВАНИЯ</h2><div class="mts-two mts-copy-row"><p class="mts-display">Переговорная — созвон<br>без лишней подготовки</p><p>Сценарий для быстрых вопросов внутри команды: пользователь видит доступные переговорные, понимает, кто уже внутри, и подключается к разговору.</p></div><div class="mts-three room-flow"><article><b>01</b><span>НАЙТИ КОМНАТУ</span></article><article><b>02</b><span>УВИДЕТЬ УЧАСТНИКОВ</span></article><article><b>03</b><span>ПОДКЛЮЧИТЬСЯ</span></article></div></section>
+
+        <section class="mts-screens"><img src="images/case-mts-link/mts-screen-01.png" alt="Экран переговорных МТС Линк"><img src="images/case-mts-link/mts-screen-02.png" alt="Интерфейс подключения к переговорной"></section>
+
+        <section class="mts-section"><h2 class="section-label">07 / КОМАНДНЫЙ РЕЗУЛЬТАТ</h2><div class="mts-two mts-copy-row"><p class="mts-display">От аналитики — к системе ключевых сценариев</p><p>На основе исследования команда спроектировала главную, планирование, конференцию, задачи, записи, переговорные и аналитику.</p></div><iframe class="behance-embed" src="https://www.behance.net/embed/project/210963153?ilo0=1" title="Проект МТС Линк на Behance" allowfullscreen loading="lazy" frameborder="0" allow="clipboard-write" referrerpolicy="strict-origin-when-cross-origin"></iframe><div class="mts-note"><b>АВТОРСТВО</b><p>Я участвовала в исследовании и архитектуре; финальную сборку UI выполнял другой дизайнер команды.</p></div></section>
+
+        <section class="mts-section mts-testing"><h2 class="section-label">08 / ПРОВЕРКА КОНЦЕПЦИИ</h2><div class="mts-two mts-copy-row"><p class="mts-display">4 сценария<br>5 респондентов</p><p>Провела коридорные проверки и одно полноценное модерируемое тестирование прототипа. Участники работали с реалистичными рабочими ситуациями.</p></div><div class="mts-four test-tasks"><article><b>01</b><span>Запланировать встречу</span></article><article><b>02</b><span>Войти в контекст при опоздании</span></article><article><b>03</b><span>Найти материалы записи</span></article><article><b>04</b><span>Зайти в переговорную</span></article></div><div class="mts-note"><b>МЕТОД</b><p>Think Aloud · успех задачи · время · 5-балльные оценки лёгкости и удовлетворённости</p></div><div class="mts-detail evidence"><header><b>ФРАГМЕНТ РАЗБОРА ТЕСТА</b><h3>Наблюдение → интерпретация → решение для следующей итерации</h3></header><div class="mts-detail-grid"><article><h4><b>01</b>Запланировать встречу с записью</h4><em>НАБЛЮДЕНИЕ</em><p>Респондент ожидал начинать планирование прямо из свободного слота календаря, а не из отдельной кнопки.</p><em>ДИЗАЙН-СЛЕДСТВИЕ</em><strong>Сделать календарь полноценной точкой входа в создание встречи.</strong></article><article><h4><b>02</b>Подключиться с опозданием и понять контекст</h4><em>НАБЛЮДЕНИЕ</em><p>Для восстановления контекста респондент открыл план, общие заметки и задачи — именно эти материалы считал полезными.</p><em>ДИЗАЙН-СЛЕДСТВИЕ</em><strong>Сохранять план, заметки и To do внутри одной встречи и показывать их во время созвона.</strong></article><article><h4><b>03</b>Найти текущую встречу</h4><em>НАБЛЮДЕНИЕ</em><p>Карточки встреч в верхней части экрана остались незамеченными; текущий статус приходилось определять по времени.</p><em>ДИЗАЙН-СЛЕДСТВИЕ</em><strong>Усилили визуальный статус активной встречи и обеспечили переход к ней из календаря.</strong></article></div></div></section>
+
+        <section class="mts-section"><h2 class="section-label">09 / РЕЗУЛЬТАТ И РЕФЛЕКСИЯ</h2><p class="mts-display mts-wide">Первый масштабный опыт<br>исследований в продуктовой команде</p><div class="mts-two result-cards"><article class="mts-accent"><div><b>РЕЗУЛЬТАТ</b><h3>Команда защитила концепцию перед дизайнерами МТС Линк и получила высшую оценку.</h3></div><div><p>Заказчик отметил дизайн, исследовательский подход и идею постоянных переговорных для быстрых командных созвонов.</p><p>Сильная сторона проекта — распределение ролей: мы работали асинхронно, но дружно и объединяли результаты на каждом этапе во время созвонов.</p></div></article><article class="mts-dark"><div><b>ЧЕМУ НАУЧИЛАСЬ</b><p class="learned">Планировать и проводить глубинные интервью<br>Удерживать структуру разговора<br>Слышать и уточнять опыт респондента<br>Синтезировать данные вместе с командой<br>Работать с брифом реального заказчика</p></div><div><b>ЧТО ИЗМЕНИЛА БЫ</b><p>Активнее участвовала бы в сборке финального UI, чтобы самой глубже поработать с дизайн-системой Granat.</p></div></article></div></section>
     </main>
+
+    <footer class="case-footer"><p class="section-label">СЛЕДУЮЩИЙ ПРОЕКТ</p><a class="next-project" href="case-foliant.html">Фолиант →</a><div class="case-footer-bottom"><dl><dt>TG</dt><dd><a href="https://t.me/yellow_favor">@YELLOW_FAVOR</a></dd><dt>EMAIL</dt><dd><a href="mailto:an.na.product.design@gmail.com">AN.NA.PRODUCT.DESIGN@GMAIL.COM</a></dd></dl><p>2026</p></div></footer>
     <script src="site-header.js" defer></script>
 </body>
 </html>

@@ -5,8 +5,8 @@ body{min-width:1024px;margin:0;color:var(--ink);background:#fff;font:16px/24px v
 p,h1,h2,h3,figure,dl,dd{margin:0}a{color:inherit}.case-page,.case-footer{width:min(100%,var(--case-width));margin-inline:auto;background:var(--surface)}
 
 /* Legacy cases still use full-section exports until they are rebuilt. */
-.case-page:not(.case-page--pognali){margin-top:calc(-1 * var(--site-header-height));overflow:hidden}
-.case-page:not(.case-page--pognali)>img,.case-page:not(.case-page--pognali)>.case-section>img{display:block;width:100%;height:auto}
+.case-page--legacy{margin-top:calc(-1 * var(--site-header-height));overflow:hidden}
+.case-page--legacy>img,.case-page--legacy>.case-section>img{display:block;width:100%;height:auto}
 .case-section{position:relative}.case-next-link{position:absolute;top:96px;left:64px;width:552px;height:180px}.case-next-link:focus-visible{outline:3px solid var(--accent)}
 
 /* Pognali case: the 1152px Figma grid inside the 1280px canvas. */
@@ -15,7 +15,7 @@ p,h1,h2,h3,figure,dl,dd{margin:0}a{color:inherit}.case-page,.case-footer{width:m
 .two-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px}.section-copy{min-height:132px;align-items:start}.section-copy>p:last-child{max-width:552px}
 .display-copy{font-size:40px;font-weight:500;line-height:44px;letter-spacing:-1.2px}.display-wide{max-width:900px}.micro-label,.accent-note,.tile>b,.panel>.micro-label{color:var(--accent);font-size:14px;font-weight:700;line-height:20px}.accent-note{font-size:16px;line-height:24px}
 
-.case-cover{min-height:904px;padding-top:32px}.case-kicker-row{display:flex;height:32px;align-items:center;justify-content:space-between}.case-kicker{color:var(--accent);font-weight:500}.case-tags{text-align:right}.case-title{font-size:112px;font-weight:500;line-height:112px;letter-spacing:-3.36px}.case-intro{display:flex;min-height:144px;justify-content:space-between}.case-lead{width:752px;font-size:40px;font-weight:500;line-height:44px;letter-spacing:-1.2px}.case-meta{display:flex;flex-direction:column;align-items:flex-end;text-align:right}.case-action{margin-top:12px;font-weight:500}.case-action b{color:var(--accent)}
+.case-cover{min-height:904px;padding-top:32px}.case-kicker-row{display:flex;height:32px;align-items:center;justify-content:space-between}.case-kicker{color:var(--accent);font-weight:500}.case-tags{text-align:right}.case-title{font-size:112px;font-weight:500;line-height:112px;letter-spacing:-3.36px}.case-intro{display:flex;min-height:144px;justify-content:space-between}.case-lead{width:752px;font-size:40px;font-weight:500;line-height:44px;letter-spacing:-1.2px}.case-meta{display:flex;flex-direction:column;align-items:flex-end;text-align:right}.case-action{margin-top:12px;color:inherit;font-weight:500;text-decoration:none}.case-action b{color:var(--accent)}
 .cover-gallery{display:flex;height:424px;padding:32px;gap:24px;align-items:center;justify-content:center;background:var(--ink)}.phone{position:relative;width:181px;height:360px}.phone>img:first-child{position:absolute;top:14px;left:14px;width:154px;height:333px;border-radius:22px;object-fit:cover}.phone-frame{position:absolute;inset:0;width:181px;height:360px;object-fit:fill;pointer-events:none}
 
 .tile-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.tile{height:176px;padding:24px;background:var(--pale)}.tile h3{margin-top:16px;font-size:24px;font-weight:500;line-height:28px}.tile-dark,.panel-dark{color:var(--surface);background:var(--ink)}.tile-dark>b{color:var(--surface)}
