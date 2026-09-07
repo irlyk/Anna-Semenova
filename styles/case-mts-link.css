@@ -1,6 +1,6 @@
 /* MTS Link case — unique section layouts on the shared 1280/1152 grid. */
 .case-page--mts {
-    background: var(--surface);
+    background: var(--surface-color);
 }
 
 .mts-section {
@@ -61,12 +61,12 @@
 }
 
 .mts-accent {
-    color: var(--surface);
+    color: var(--surface-color);
     background: var(--primary-color);
 }
 
 .mts-dark {
-    color: var(--surface);
+    color: var(--surface-color);
     background: var(--tertiary-color);
 }
 
@@ -227,7 +227,7 @@
 }
 
 .mts-process .active {
-    color: var(--surface);
+    color: var(--surface-color);
     background: var(--primary-color);
 }
 
@@ -295,7 +295,7 @@
     padding: 24px;
     flex-direction: column;
     gap: 16px;
-    background: var(--surface);
+    background: var(--surface-color);
     border: 1px solid #c9c9c9;
 }
 
@@ -333,7 +333,7 @@
 }
 
 .meeting-types .mts-accent {
-    color: var(--surface);
+    color: var(--surface-color);
     background: var(--primary-color);
 }
 
@@ -389,7 +389,7 @@
 }
 
 .lifecycle .mts-dark {
-    color: var(--surface);
+    color: var(--surface-color);
     background: var(--tertiary-color);
 }
 
@@ -405,7 +405,7 @@
 
 .architecture {
     height: 448px;
-    background: var(--surface);
+    background: var(--surface-color);
     border: 1px dashed #c9c9c9;
 }
 
@@ -449,7 +449,7 @@
     grid-template-columns: 256px 1fr;
     align-items: center;
     background: var(--primary-color);
-    color: var(--surface);
+    color: var(--surface-color);
 }
 
 .mts-rooms {
@@ -479,7 +479,7 @@
     padding: 0 64px 64px;
     flex-direction: column;
     gap: 48px;
-    background: var(--surface);
+    background: var(--surface-color);
 }
 
 .mts-screens img {
@@ -530,7 +530,7 @@
     height: 74px;
     min-height: 74px;
     padding: 24px;
-    color: var(--surface);
+    color: var(--surface-color);
     background: var(--tertiary-color);
     border: 0;
 }
