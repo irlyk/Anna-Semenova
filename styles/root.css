@@ -11,10 +11,88 @@
     --border-size: 1px;
     --border-color: #C9C9C9;
 
-    /* Typography tokens */
+    /*--- Typography tokens ---*/
     --base-font-size: 16px;
     --base-line-height: 24px;
     --base-font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    /* font weights */
+    --regular-weight: 400;
+    --medium-weight: 500;
+    --semibold-weight: 600;
+    --bold-weight: 700;
+
+    /* H! */
+    --h1-font-size: 7rem;
+    --h1-line-height: 7.5rem;
+    --h1-letter-spacing: -1.5%;
+    --h1-weight: var(--semibold-weight);
+    --h1-color: var(--tertiary-color);
+
+    /* H2 */
+    --h2-font-size: 3.5rem;
+    --h2-line-height: 4rem;
+    --h2-letter-spacing: -0.5%;
+    --h2-weight: var(--medium-weight);
+    --h2-color: var(--tertiary-color);
+
+    /* H3 */
+    --h3-font-size: 2.5rem;
+    --h3-line-height: 3rem;
+    --h3-letter-spacing: -0.5%;
+    --h3-weight: var(--medium-weight);
+    --h3-color: var(--tertiary-color);
+
+    /* H4 */
+    --h4-font-size: 2rem;
+    --h4-line-height: 2.5rem;
+    --h4-letter-spacing: 0%;
+    --h4-weight: var(--medium-weight);
+    --h4-color: var(--tertiary-color);
+
+    /* H5 */
+    --h5-font-size: 1.5rem;
+    --h5-line-height: 2rem;
+    --h5-letter-spacing: 0%;
+    --h5-weight: var(--medium-weight);
+    --h5-color: var(--tertiary-color);
+
+    /* Body-default */
+    --body-default-font-size: 1rem;
+    --body-default-line-height: 1.5rem;
+    --body-default-letter-spacing: 0%;
+    --body-default-weight: var(--regular-weight);
+    --body-default-color: var(--tertiary-color);
+
+    /* Body-emphasis */
+    --body-emphasis-font-size: 1rem;
+    --body-emphasis-line-height: 1.5rem;
+    --body-emphasis-letter-spacing: 0%;
+    --body-emphasis-weight: var(--medium-weight);
+    --body-emphasis-color: var(--tertiary-color);
+
+    /* Body-strong */
+    --body-strong-font-size: 1rem;
+    --body-strong-line-height: 1.5rem;
+    --body-strong-letter-spacing: 0%;
+    --body-strong-weight: var(--bold-weight);
+    --body-strong-color: var(--tertiary-color);
+
+    /* label-default */
+    --label-default-font-size: 0.875rem;
+    --label-default-line-height: 1.25rem;
+    --label-default-letter-spacing: 0.2%;
+    --label-default-weight: var(--medium-weight);
+    --label-default-color: var(--tertiary-color);
+
+    /* label-small */
+    --label-small-font-size: 0.75rem;
+    --label-small-line-height: 1rem;
+    --label-small-letter-spacing: 0.3%;
+    --label-small-weight: var(--medium-weight);
+    --label-small-color: var(--tertiary-color);
+
+    /* --- end section --- */
 
     /* Mobile layout tokens */
     --mobile-content-width: 350px;
@@ -28,5 +106,126 @@
 
     /* Reset tokens */
     --base-padding: 0;
-    --base-margin: 0;
+    --base-margin: 0;    
 }
+
+/* h1 {
+    font-size: var(--h1-font-size);
+    line-height: var(--h1-line-height);
+    letter-spacing: var(--h1-letter-spacing);
+    font-weight: var(--h1-weight);
+    color: var(--h1-color);
+}
+
+.h1 {
+    font-size: var(--h1-font-size);
+    line-height: var(--h1-line-height);
+    letter-spacing: var(--h1-letter-spacing);
+    font-weight: var(--h1-weight);
+    color: var(--h1-color);
+}
+
+h2 {
+    font-size: var(--h2-font-size);
+    line-height: var(--h2-line-height);
+    letter-spacing: var(--h2-letter-spacing);
+    font-weight: var(--h2-weight);
+    color: var(--h2-color);
+}
+
+.h2 {
+    font-size: var(--h2-font-size);
+    line-height: var(--h2-line-height);
+    letter-spacing: var(--h2-letter-spacing);
+    font-weight: var(--h2-weight);
+    color: var(--h2-color);
+}
+
+h3 {
+    font-size: var(--h3-font-size);
+    line-height: var(--h3-line-height);
+    letter-spacing: var(--h3-letter-spacing);
+    font-weight: var(--h3-weight);
+    color: var(--h3-color);
+}
+
+.h3 {
+    font-size: var(--h3-font-size);
+    line-height: var(--h3-line-height);
+    letter-spacing: var(--h3-letter-spacing);
+    font-weight: var(--h3-weight);
+    color: var(--h3-color);
+}
+
+h4 {
+    font-size: var(--h4-font-size);
+    line-height: var(--h4-line-height);
+    letter-spacing: var(--h4-letter-spacing);
+    font-weight: var(--h4-weight);
+    color: var(--h4-color);
+}
+
+.h4 {
+    font-size: var(--h4-font-size);
+    line-height: var(--h4-line-height);
+    letter-spacing: var(--h4-letter-spacing);
+    font-weight: var(--h4-weight);
+    color: var(--h4-color);
+}
+
+h5 {
+    font-size: var(--h5-font-size);
+    line-height: var(--h5-line-height);
+    letter-spacing: var(--h5-letter-spacing);
+    font-weight: var(--h5-weight);
+    color: var(--h5-color);
+}
+
+.h5 {
+    font-size: var(--h5-font-size);
+    line-height: var(--h5-line-height);
+    letter-spacing: var(--h5-letter-spacing);
+    font-weight: var(--h5-weight);
+    color: var(--h5-color);
+} 
+
+.body-default {
+    font-size: var(--body-default-font-size);
+    line-height: var(--body-default-line-height);
+    letter-spacing: var(--body-default-letter-spacing);
+    font-weight: var(--body-default-weight);
+    color: var(--body-default-color);
+}
+
+.body-emphasis {
+    font-size: var(--body-emphasis-font-size);
+    line-height: var(--body-emphasis-line-height);
+    letter-spacing: var(--body-emphasis-letter-spacing);
+    font-weight: var(--body-emphasis-weight);
+    color: var(--body-emphasis-color);
+}
+
+.body-strong {
+    font-size: var(--body-strong-font-size);
+    line-height: var(--body-strong-line-height);
+    letter-spacing: var(--body-strong-letter-spacing);
+    font-weight: var(--body-strong-weight);
+    color: var(--body-strong-color);
+}
+
+.label-default {
+    font-size: var(--label-default-font-size);
+    line-height: var(--label-default-line-height);
+    letter-spacing: var(--label-default-letter-spacing);
+    font-weight: var(--label-default-weight);
+    color: var(--label-default-color);
+}
+
+.label-small {
+    font-size: var(--label-small-font-size);
+    line-height: var(--label-small-line-height);
+    letter-spacing: var(--label-small-letter-spacing);
+    font-weight: var(--label-small-weight);
+    color: var(--label-small-color);
+}
+*/
