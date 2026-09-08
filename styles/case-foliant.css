@@ -131,9 +131,11 @@
     text-align: right;
 }
 
-.foliant-meta span {
+.foliant-meta .foliant-action {
     min-height: 44px;
+    color: inherit;
     font-weight: 500;
+    text-decoration: none;
     white-space: nowrap;
 }
 
@@ -961,7 +963,7 @@
         text-align: left;
     }
 
-    .case-page--foliant .foliant-meta span {
+    .case-page--foliant .foliant-meta .foliant-action {
         min-height: 0;
         font-size: 14px;
         line-height: 20px;
