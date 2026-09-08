@@ -4,7 +4,7 @@
 <head>
     <!-- Metadata (invisible to users) goes here -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Портфолио Анна Семенова</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,8 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="./styles/root.css">
-    <link rel="stylesheet" href="./styles/styles.css?v=18" />
-    <link rel="stylesheet" href="./styles/site-header.css?v=1" />
+    <link rel="stylesheet" href="./styles/styles.css?v=22" />
+    <link rel="stylesheet" href="./styles/site-header.css?v=3" />
 </head>
 
 <body>
@@ -39,13 +39,18 @@
 
         <section id="hero" class="content-section hero-section">
             <div class="hero-poster">
+                <div class="hero-poster-media" aria-hidden="true">
+                    <img src="images/hero-primary-original.jpg" alt="">
+                </div>
                 <div class="hero-poster-text">
                     <p>Я продуктовый дизайнер с бэкграундом<br /> в математике, экономике и анализе данных.</p>
                     <p>После нескольких лет работы актуарием<br /> я решила сменить профессию
                         и окончила<br /> магистратуру по продуктовому дизайну.</p>
                 </div>
             </div>
-            <div class="hero-photo"></div>
+            <div class="hero-photo" role="img" aria-label="Портрет Ани">
+                <img src="images/hero-secondary-original.png" alt="">
+            </div>
             <div class="describe-section">
                 <div class="describe-text-section">
                     <p class="describe-text describe-text-desktop">Ищу первую роль <span
@@ -226,6 +231,11 @@
             </div>
         </section>
 
+        <div class="about-chapter">
+        <div class="about-mountain-continuous" aria-hidden="true">
+            <img src="images/about-mountain-original.jpg" alt="">
+        </div>
+
         <section id="reasons" class="content-section about-section about-first">
             <div class="about-heading">
                 <h2><span class="text-accent">03</span> / ПОЧЕМУ ДИЗАЙН</h2>
@@ -284,7 +294,10 @@
                 <p><em>С ГОЛОВОЙ</em></p>
             </div>
             <div class="newton-story">
-                <img src="images/newton-overhead.png" alt="Ньютон среди камней" class="newton-photo newton-overhead">
+                <picture class="newton-photo newton-overhead">
+                    <source media="(max-width: 767px)" srcset="images/newton-overhead-mobile@4x.png">
+                    <img src="images/newton-overhead@4x.png" alt="Ньютон среди камней">
+                </picture>
                 <div class="newton-copy">
                     <p class="newton-title"><span class="desktop-prefix">03 / </span><em>Ньютон</em> — это мой корги!
                     </p>
@@ -296,10 +309,13 @@
                             Мы все очень разные, но живём удивительно дружно.</p>
                     </div>
                 </div>
-                <img src="images/newton-portrait.png" alt="Портрет корги Ньютона"
-                    class="newton-photo newton-portrait">
+                <picture class="newton-photo newton-portrait">
+                    <source media="(max-width: 767px)" srcset="images/newton-portrait-mobile@4x.png">
+                    <img src="images/newton-portrait@4x.png" alt="Портрет корги Ньютона">
+                </picture>
             </div>
         </section>
+        </div>
 
         <section id="contacts" class="contacts-section">
             <div class="contacts-panel">

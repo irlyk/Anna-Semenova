@@ -94,8 +94,9 @@
 
 @media (max-width: 767px) {
     .site-header {
-        height: 72px;
-        padding: 16px var(--mobile-gutter);
+        /* Fill the iPhone safe area used by Telegram and other in-app browsers. */
+        height: calc(72px + env(safe-area-inset-top, 0px));
+        padding: calc(16px + env(safe-area-inset-top, 0px)) var(--mobile-gutter) 16px;
         align-items: center;
     }
 
@@ -160,7 +161,7 @@
 
     .site-header nav ul {
         position: absolute;
-        top: 72px;
+        top: calc(72px + env(safe-area-inset-top, 0px));
         right: 0;
         left: 0;
         display: none;
